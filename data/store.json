@@ -1,0 +1,3849 @@
+{
+  "products": [
+    {
+      "id": "prod-look-003",
+      "sku": "HPC-ACC-003",
+      "name": "Mini Sacoche Rigide Box Crossbody Noir",
+      "slug": "mini-sacoche-rigide-box-crossbody-noir",
+      "category": "accessoires",
+      "description": "Format boîte compacte rigide en cuir grainé avec sangle nylon amovible. Conçue pour sécuriser smartphone, cartes et clés lors des déplacements urbains avec une silhouette géométrique ultra-sharp.",
+      "details": [
+        "Structure rigide antichoc gainée de cuir grainé",
+        "Fermeture magnétique invisible",
+        "Sangle réglable avec passants pour ceinture"
+      ],
+      "materials": "Cuir vegan texturé, armature rigide polymère",
+      "careAdvice": "Essuyer avec un chiffon sec et doux.",
+      "price": 22000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "Unique"
+      ],
+      "colors": [
+        {
+          "name": "Noir Matte",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-look-003-1",
+          "size": "Unique",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 8,
+          "sku": "HPC-ACC-003-UNI"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 8,
+      "createdAt": "2026-03-05T15:00:00Z",
+      "updatedAt": "2026-03-05T15:00:00Z"
+    },
+    {
+      "id": "prod-look-008",
+      "sku": "HPC-JNS-008",
+      "name": "Jean Baggy Déstructuré Splatter & Acide",
+      "slug": "jean-baggy-destructure-splatter-acide",
+      "category": "pantalons",
+      "description": "Traitement artisanal unique par projection de pigments et décoloration ciblée. Coupe super-baggy avec surpiqûres rouges graphiques et passants de ceinture renforcés.",
+      "details": [
+        "Chaque exemplaire possède un motif de projection unique",
+        "Denim compact résistant",
+        "Ourlet large tombant sur la semelle"
+      ],
+      "materials": "100% Coton denim haute tenue",
+      "careAdvice": "Lavage délicat séparé à l’eau froide.",
+      "price": 38000,
+      "salePrice": 34000,
+      "images": [
+        "/assets/aistudio/1793196195794_1__83aad193.jpg",
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "colors": [
+        {
+          "name": "Gris Délavé & Rouge",
+          "hex": "#6b7280"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-look-008-1",
+          "size": "30",
+          "color": "Gris Délavé & Rouge",
+          "colorHex": "#6b7280",
+          "stock": 3,
+          "sku": "HPC-JNS-008-30"
+        },
+        {
+          "id": "v-look-008-2",
+          "size": "32",
+          "color": "Gris Délavé & Rouge",
+          "colorHex": "#6b7280",
+          "stock": 6,
+          "sku": "HPC-JNS-008-32"
+        },
+        {
+          "id": "v-look-008-3",
+          "size": "34",
+          "color": "Gris Délavé & Rouge",
+          "colorHex": "#6b7280",
+          "stock": 4,
+          "sku": "HPC-JNS-008-34"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 13,
+      "createdAt": "2026-03-05T14:00:00Z",
+      "updatedAt": "2026-03-05T14:00:00Z"
+    },
+    {
+      "id": "prod-look-002",
+      "sku": "HPC-JNS-002",
+      "name": "Jean Skate Baggy Broderies & Chaîne Métal",
+      "slug": "jean-skate-baggy-broderies-chaine-metal",
+      "category": "pantalons",
+      "description": "Denim coupe large oversize 90s inspiré du style skate urbain. Empiècements croix sérigraphiés, boucle porte-chaîne amovible en métal argenté et délavage texturé.",
+      "details": [
+        "Denim lourd 13.5 oz 100% coton",
+        "Chaîne en alliage métallique résistant à l’oxydation incluse",
+        "Bas de jambe large empilable sur sneakers montantes"
+      ],
+      "materials": "100% Coton denim brut",
+      "careAdvice": "Laver à l’envers à 30°C.",
+      "price": 35000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "colors": [
+        {
+          "name": "Bleu Denim Délavé",
+          "hex": "#87a2ba"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-look-002-1",
+          "size": "30",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 4,
+          "sku": "HPC-JNS-002-30"
+        },
+        {
+          "id": "v-look-002-2",
+          "size": "32",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 7,
+          "sku": "HPC-JNS-002-32"
+        },
+        {
+          "id": "v-look-002-3",
+          "size": "34",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 6,
+          "sku": "HPC-JNS-002-34"
+        },
+        {
+          "id": "v-look-002-4",
+          "size": "36",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 3,
+          "sku": "HPC-JNS-002-36"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 20,
+      "createdAt": "2026-03-05T13:00:00Z",
+      "updatedAt": "2026-03-05T13:00:00Z"
+    },
+    {
+      "id": "prod-look-007",
+      "sku": "HPC-LTR-007",
+      "name": "Blouson Moto Biker Cuir Rouge Écarlate HP",
+      "slug": "blouson-moto-biker-cuir-rouge-ecarlate-hp",
+      "category": "varsity",
+      "description": "La pièce forte par excellence. Cuir souple de première qualité teinté en rouge carmin profond, zips métalliques renforcés, col officier boutonné à pression et détails matelassés anatomiques sur les épaules.",
+      "details": [
+        "Cuir d’agneau reconstitué souple haut de gamme",
+        "Doublure thermique amovible pour le confort en toute saison",
+        "Fermeture zippée asymétrique et double serrage taille"
+      ],
+      "materials": "Extérieur 100% Cuir premium souple, Doublure 100% Satin polyester",
+      "careAdvice": "Nettoyage professionnel du cuir uniquement.",
+      "price": 75000,
+      "salePrice": 68000,
+      "images": [
+        "/assets/aistudio/1793196195794_1__83aad193.jpg",
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Rouge Écarlate",
+          "hex": "#dc2626"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-look-007-1",
+          "size": "M",
+          "color": "Rouge Écarlate",
+          "colorHex": "#dc2626",
+          "stock": 3,
+          "sku": "HPC-LTR-007-M"
+        },
+        {
+          "id": "v-look-007-2",
+          "size": "L",
+          "color": "Rouge Écarlate",
+          "colorHex": "#dc2626",
+          "stock": 5,
+          "sku": "HPC-LTR-007-L"
+        },
+        {
+          "id": "v-look-007-3",
+          "size": "XL",
+          "color": "Rouge Écarlate",
+          "colorHex": "#dc2626",
+          "stock": 2,
+          "sku": "HPC-LTR-007-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 10,
+      "createdAt": "2026-03-05T12:00:00Z",
+      "updatedAt": "2026-03-05T12:00:00Z"
+    },
+    {
+      "id": "prod-look-004",
+      "sku": "HPC-SHR-004",
+      "name": "Chemise Satinée Motif Bandana Émeraude",
+      "slug": "chemise-satinee-motif-bandana-emeraude",
+      "category": "tshirts",
+      "description": "Chemise à col cubain décontracté confectionnée dans un sergé satiné soyeux et respirant. Imprimé paisley bandana géométrique sur fond turquoise tropical et vert émeraude, idéal pour les sorties ensoleillées à Cotonou.",
+      "details": [
+        "Tissu satiné léger à tombé fluide thermorégulateur",
+        "Col camp collar ouvert vintage",
+        "Boutons ton sur ton en nacre synthétique"
+      ],
+      "materials": "100% Rayonne satinée ultra-douce",
+      "careAdvice": "Lavage délicat à 30°C. Repassage doux à la vapeur.",
+      "price": 32000,
+      "salePrice": 28000,
+      "images": [
+        "/assets/aistudio/1793196179671_1__fa78fa1f.jpg",
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Turquoise & Émeraude",
+          "hex": "#14b8a6"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-look-004-1",
+          "size": "M",
+          "color": "Turquoise & Émeraude",
+          "colorHex": "#14b8a6",
+          "stock": 6,
+          "sku": "HPC-SHR-004-M"
+        },
+        {
+          "id": "v-look-004-2",
+          "size": "L",
+          "color": "Turquoise & Émeraude",
+          "colorHex": "#14b8a6",
+          "stock": 9,
+          "sku": "HPC-SHR-004-L"
+        },
+        {
+          "id": "v-look-004-3",
+          "size": "XL",
+          "color": "Turquoise & Émeraude",
+          "colorHex": "#14b8a6",
+          "stock": 4,
+          "sku": "HPC-SHR-004-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 19,
+      "createdAt": "2026-03-05T11:00:00Z",
+      "updatedAt": "2026-03-05T11:00:00Z"
+    },
+    {
+      "id": "prod-look-001",
+      "sku": "HPC-DNM-001",
+      "name": "Veste Denim Délavée « Cyber Drip » Broderies",
+      "slug": "veste-denim-delavee-cyber-drip-broderies",
+      "category": "varsity",
+      "description": "Veste en denim brut délavé vintage à coupe boxy ample. Épaules tombantes, surpiqûres contrastées robustes, broderies calligraphiques discrètes sur la manche et boutons métalliques siglés HP Collection. Portée avec aisance sur un tee-shirt blanc ou un hoodie fin.",
+      "details": [
+        "Toile denim 100% coton lourd 14 oz pré-délavé à la pierre ponce",
+        "Finitions brodées haute précision sur les avant-bras",
+        "Poches poitrine à rabat boutonné et poches mains latérales",
+        "Pattes de serrage réglables à la taille"
+      ],
+      "materials": "100% Coton denim haute résistance",
+      "careAdvice": "Lavage en machine à l’envers à 30°C. Ne pas utiliser d’eau de javel.",
+      "price": 48000,
+      "salePrice": 42000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Bleu Denim Délavé",
+          "hex": "#87a2ba"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-look-001-1",
+          "size": "M",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 5,
+          "sku": "HPC-DNM-001-M"
+        },
+        {
+          "id": "v-look-001-2",
+          "size": "L",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 8,
+          "sku": "HPC-DNM-001-L"
+        },
+        {
+          "id": "v-look-001-3",
+          "size": "XL",
+          "color": "Bleu Denim Délavé",
+          "colorHex": "#87a2ba",
+          "stock": 4,
+          "sku": "HPC-DNM-001-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 17,
+      "createdAt": "2026-03-05T10:00:00Z",
+      "updatedAt": "2026-03-05T10:00:00Z"
+    },
+    {
+      "id": "prod-001",
+      "sku": "HPC-VAR-001",
+      "name": "Veste Varsity HP Heavyweight Vintage",
+      "slug": "veste-varsity-hp-heavyweight-vintage",
+      "category": "varsity",
+      "description": "Pièce maîtresse de la collection urbaine. Corps en laine mélangée texturée avec manches contrastées souples, écussons chenille brodés à la main et boutons pression en métal vieilli. Coupe boxy moderne idéale sur un hoodie ou un t-shirt simple.",
+      "details": [
+        "Corps en drap de laine mélangée lourd (450 GSM)",
+        "Manches en simili cuir premium souple grainé",
+        "Doublure intérieure satinée thermo-régulatrice",
+        "Bord-côte rayé épais aux poignets et à la taille",
+        "Deux poches passepoilées extérieures et une poche intérieure portefeuille"
+      ],
+      "materials": "65% Laine, 35% Polyester, Doublure 100% Satin Polyester",
+      "careAdvice": "Nettoyage à sec recommandé. Ne pas passer au sèche-linge.",
+      "price": 65000,
+      "salePrice": 58000,
+      "images": [
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Crème",
+          "hex": "#171717"
+        },
+        {
+          "name": "Vert Forêt & Or",
+          "hex": "#1e3a2f"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-001-1",
+          "size": "M",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-VAR-001-M-BLK"
+        },
+        {
+          "id": "v-001-2",
+          "size": "L",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 6,
+          "sku": "HPC-VAR-001-L-BLK"
+        },
+        {
+          "id": "v-001-3",
+          "size": "XL",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-VAR-001-XL-BLK"
+        },
+        {
+          "id": "v-001-4",
+          "size": "M",
+          "color": "Vert Forêt & Or",
+          "colorHex": "#1e3a2f",
+          "stock": 2,
+          "sku": "HPC-VAR-001-M-GRN"
+        },
+        {
+          "id": "v-001-5",
+          "size": "L",
+          "color": "Vert Forêt & Or",
+          "colorHex": "#1e3a2f",
+          "stock": 5,
+          "sku": "HPC-VAR-001-L-GRN"
+        },
+        {
+          "id": "v-001-6",
+          "size": "XL",
+          "color": "Vert Forêt & Or",
+          "colorHex": "#1e3a2f",
+          "stock": 2,
+          "sku": "HPC-VAR-001-XL-GRN"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 21,
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-10-28T17:47:36.150Z"
+    },
+    {
+      "id": "prod-002",
+      "sku": "HPC-SNK-002",
+      "name": "Sneakers HP Apex Low Retro « Obsidian Gold »",
+      "slug": "sneakers-hp-apex-low-retro-obsidian-gold",
+      "category": "sneakers",
+      "description": "Inspirée de la culture basket des années 90 réinventée pour le bitume urbain. Empeigne en cuir pleine fleur avec empiècements en suède doux, semelle cousue 360° résistante à la chaleur et amorti gel au talon pour un confort toute la journée sous le soleil béninois.",
+      "details": [
+        "Cuir véritable pleine fleur combiné à du nubuck brossé",
+        "Semelle intermédiaire avec coussin d’air amortissant",
+        "Semelle extérieure en caoutchouc gomme à chevrons antidérapante",
+        "Deux paires de lacets fournies (noir ciré et blanc cassé écru)"
+      ],
+      "materials": "Tige 100% Cuir & Nubuck, Semelle 100% Caoutchouc vulcanisé",
+      "careAdvice": "Nettoyer avec une brosse souple et un nettoyant moussant spécial sneakers.",
+      "price": 55000,
+      "images": [
+        "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Or",
+          "hex": "#C7A747"
+        },
+        {
+          "name": "Blanc Ivoire & Gris",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-002-1",
+          "size": "41",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 3,
+          "sku": "HPC-SNK-002-41-NRO"
+        },
+        {
+          "id": "v-002-2",
+          "size": "42",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 5,
+          "sku": "HPC-SNK-002-42-NRO"
+        },
+        {
+          "id": "v-002-3",
+          "size": "43",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 4,
+          "sku": "HPC-SNK-002-43-NRO"
+        },
+        {
+          "id": "v-002-4",
+          "size": "44",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 3,
+          "sku": "HPC-SNK-002-44-NRO"
+        },
+        {
+          "id": "v-002-5",
+          "size": "45",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 2,
+          "sku": "HPC-SNK-002-45-NRO"
+        },
+        {
+          "id": "v-002-6",
+          "size": "42",
+          "color": "Blanc Ivoire & Gris",
+          "colorHex": "#F4F1E9",
+          "stock": 4,
+          "sku": "HPC-SNK-002-42-BIV"
+        },
+        {
+          "id": "v-002-7",
+          "size": "43",
+          "color": "Blanc Ivoire & Gris",
+          "colorHex": "#F4F1E9",
+          "stock": 3,
+          "sku": "HPC-SNK-002-43-BIV"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 24,
+      "createdAt": "2026-03-02T12:00:00Z",
+      "updatedAt": "2026-03-02T12:00:00Z"
+    },
+    {
+      "id": "prod-003",
+      "sku": "HPC-SRV-003",
+      "name": "Ensemble Survêtement Tech Heavy Fleece HP",
+      "slug": "ensemble-survetement-tech-heavy-fleece-hp",
+      "category": "survetements",
+      "description": "L’ensemble ultime pour allier allure décontractée et présence scénique. Sweat à col montant zippé 1/4 avec pantalon fuselé assorti, cordons de serrage métalliques gravés et poches étanches discrètes. Molleton brossé intérieur ultra-doux.",
+      "details": [
+        "Comprend le sweat zippé quart de tour et le pantalon de jogging",
+        "Molleton lourd 420 GSM pré-rétréci",
+        "Fermetures zippées YKK invisibles sur poches latérales",
+        "Logo HP Collection brodé en fil haute densité or mat"
+      ],
+      "materials": "80% Coton peigné biologique, 20% Polyester recyclé",
+      "careAdvice": "Lavage en machine à 30°C sur l’envers. Repassage doux.",
+      "price": 48000,
+      "salePrice": 42000,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Matte",
+          "hex": "#171717"
+        },
+        {
+          "name": "Gris Acier Chaud",
+          "hex": "#5c6068"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-003-1",
+          "size": "M",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-SRV-003-M-BLK"
+        },
+        {
+          "id": "v-003-2",
+          "size": "L",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 7,
+          "sku": "HPC-SRV-003-L-BLK"
+        },
+        {
+          "id": "v-003-3",
+          "size": "XL",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-SRV-003-XL-BLK"
+        },
+        {
+          "id": "v-003-4",
+          "size": "XXL",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 2,
+          "sku": "HPC-SRV-003-XXL-BLK"
+        },
+        {
+          "id": "v-003-5",
+          "size": "M",
+          "color": "Gris Acier Chaud",
+          "colorHex": "#5c6068",
+          "stock": 3,
+          "sku": "HPC-SRV-003-M-GRY"
+        },
+        {
+          "id": "v-003-6",
+          "size": "L",
+          "color": "Gris Acier Chaud",
+          "colorHex": "#5c6068",
+          "stock": 4,
+          "sku": "HPC-SRV-003-L-GRY"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 25,
+      "createdAt": "2026-02-15T09:00:00Z",
+      "updatedAt": "2026-02-15T09:00:00Z"
+    },
+    {
+      "id": "prod-004",
+      "sku": "HPC-BSK-004",
+      "name": "Baskets Montantes Pro Court « Dynasty High »",
+      "slug": "baskets-montantes-pro-court-dynasty-high",
+      "category": "basket",
+      "description": "Conçues pour dominer les parquets et attirer tous les regards en ville. Maintien de cheville renforcé avec col matelassé ergonomique, tige composite résistante aux torsions et amorti dynamique réactif.",
+      "details": [
+        "Tige montante avec languette rembourrée respirante",
+        "Système de laçage verrouillé pour stabilité maximale",
+        "Semelle cupsole ultra-résistante à l’abrasion sur bitume"
+      ],
+      "materials": "Empeigne Cuir synthétique haute ténacité, semelle caoutchouc",
+      "careAdvice": "Essuyer avec un chiffon humide après utilisation.",
+      "price": 68000,
+      "images": [
+        "https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Rouge Royal",
+          "hex": "#8a1919"
+        },
+        {
+          "name": "Blanc & Or Impérial",
+          "hex": "#C7A747"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-004-1",
+          "size": "42",
+          "color": "Noir & Rouge Royal",
+          "colorHex": "#8a1919",
+          "stock": 2,
+          "sku": "HPC-BSK-004-42-RED"
+        },
+        {
+          "id": "v-004-2",
+          "size": "43",
+          "color": "Noir & Rouge Royal",
+          "colorHex": "#8a1919",
+          "stock": 3,
+          "sku": "HPC-BSK-004-43-RED"
+        },
+        {
+          "id": "v-004-3",
+          "size": "44",
+          "color": "Noir & Rouge Royal",
+          "colorHex": "#8a1919",
+          "stock": 2,
+          "sku": "HPC-BSK-004-44-RED"
+        },
+        {
+          "id": "v-004-4",
+          "size": "42",
+          "color": "Blanc & Or Impérial",
+          "colorHex": "#C7A747",
+          "stock": 3,
+          "sku": "HPC-BSK-004-42-GLD"
+        },
+        {
+          "id": "v-004-5",
+          "size": "43",
+          "color": "Blanc & Or Impérial",
+          "colorHex": "#C7A747",
+          "stock": 4,
+          "sku": "HPC-BSK-004-43-GLD"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 14,
+      "createdAt": "2026-03-03T14:00:00Z",
+      "updatedAt": "2026-03-03T14:00:00Z"
+    },
+    {
+      "id": "prod-005",
+      "sku": "HPC-TSH-005",
+      "name": "T-shirt Oversize « Rules & Ambition » 260 GSM",
+      "slug": "tshirt-oversize-rules-ambition-260-gsm",
+      "category": "tshirts",
+      "description": "Le t-shirt signature HP COLLECTION arborant le mantra « Ton style. Tes règles. » sérigraphié en encre gonflante au dos. Coupe tombante sur les épaules, col rond épais de 3 cm qui ne se déforme jamais après lavage.",
+      "details": [
+        "Jersey lourd 260 GSM 100% coton peigné doux",
+        "Sérigraphie sérigraphique haute définition en relief",
+        "Étiquette tissée HP Collection or au niveau de l’ourlet inférieur"
+      ],
+      "materials": "100% Coton peigné haut de gamme",
+      "careAdvice": "Laver à l’envers à 30°C. Ne pas repasser directement sur le visuel.",
+      "price": 18000,
+      "images": [
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Carbone",
+          "hex": "#171717"
+        },
+        {
+          "name": "Blanc Craie",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-005-1",
+          "size": "M",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 8,
+          "sku": "HPC-TSH-005-M-BLK"
+        },
+        {
+          "id": "v-005-2",
+          "size": "L",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 12,
+          "sku": "HPC-TSH-005-L-BLK"
+        },
+        {
+          "id": "v-005-3",
+          "size": "XL",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 6,
+          "sku": "HPC-TSH-005-XL-BLK"
+        },
+        {
+          "id": "v-005-4",
+          "size": "M",
+          "color": "Blanc Craie",
+          "colorHex": "#F4F1E9",
+          "stock": 6,
+          "sku": "HPC-TSH-005-M-WHT"
+        },
+        {
+          "id": "v-005-5",
+          "size": "L",
+          "color": "Blanc Craie",
+          "colorHex": "#F4F1E9",
+          "stock": 10,
+          "sku": "HPC-TSH-005-L-WHT"
+        },
+        {
+          "id": "v-005-6",
+          "size": "XL",
+          "color": "Blanc Craie",
+          "colorHex": "#F4F1E9",
+          "stock": 5,
+          "sku": "HPC-TSH-005-XL-WHT"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 4,
+      "totalStock": 47,
+      "createdAt": "2026-02-10T08:00:00Z",
+      "updatedAt": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "prod-006",
+      "sku": "HPC-HDY-006",
+      "name": "Hoodie Boxy Heavyweight HP « Golden Monogram »",
+      "slug": "hoodie-boxy-heavyweight-hp-golden-monogram",
+      "category": "hoodies",
+      "description": "Capuche double épaisseur sans cordon pour une esthétique architecturale épurée. Molleton compact brossé de 500 GSM, poche kangourou renforcée aux coutures et écusson brodé discrètement sur la manche gauche.",
+      "details": [
+        "Capuche rigide sculptée qui tient droite naturellement",
+        "Poche ventrale avec rivets discrets de renfort",
+        "Coupe courte et large (boxy fit)"
+      ],
+      "materials": "85% Coton biologique, 15% Polyester recyclé",
+      "careAdvice": "Lavage doux 30°C. Séchage à plat.",
+      "price": 36000,
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Profond",
+          "hex": "#171717"
+        },
+        {
+          "name": "Moka Chocolat",
+          "hex": "#3e2e28"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-006-1",
+          "size": "M",
+          "color": "Noir Profond",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-HDY-006-M-BLK"
+        },
+        {
+          "id": "v-006-2",
+          "size": "L",
+          "color": "Noir Profond",
+          "colorHex": "#171717",
+          "stock": 6,
+          "sku": "HPC-HDY-006-L-BLK"
+        },
+        {
+          "id": "v-006-3",
+          "size": "XL",
+          "color": "Noir Profond",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-HDY-006-XL-BLK"
+        },
+        {
+          "id": "v-006-4",
+          "size": "L",
+          "color": "Moka Chocolat",
+          "colorHex": "#3e2e28",
+          "stock": 3,
+          "sku": "HPC-HDY-006-L-MOK"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 16,
+      "createdAt": "2026-03-01T15:00:00Z",
+      "updatedAt": "2026-03-01T15:00:00Z"
+    },
+    {
+      "id": "prod-007",
+      "sku": "HPC-CRG-007",
+      "name": "Pantalon Cargo Tactique Multi-Poches « Nomad »",
+      "slug": "pantalon-cargo-tactique-multipoches-nomad",
+      "category": "pantalons",
+      "description": "Confectionné en toile ripstop déperlante et indestructible. Doté de 6 poches cargo zippées et à rabats magnétiques, bas de jambe ajustable par cordon élastique et taille semi-élastiquée pour un confort sans contrainte.",
+      "details": [
+        "Toile technique indéchirable (Ripstop anti-abrasion)",
+        "6 poches ergonomiques et anneau porte-clés métallique D-Ring",
+        "Chevilles resserrables par stoppeurs techniques"
+      ],
+      "materials": "65% Coton technique, 35% Nylon ripstop",
+      "careAdvice": "Lavage délicat à l’eau froide.",
+      "price": 32000,
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "colors": [
+        {
+          "name": "Noir Onyx",
+          "hex": "#171717"
+        },
+        {
+          "name": "Kaki Militaire",
+          "hex": "#404639"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-007-1",
+          "size": "30",
+          "color": "Noir Onyx",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-CRG-007-30-BLK"
+        },
+        {
+          "id": "v-007-2",
+          "size": "32",
+          "color": "Noir Onyx",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-CRG-007-32-BLK"
+        },
+        {
+          "id": "v-007-3",
+          "size": "34",
+          "color": "Noir Onyx",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-CRG-007-34-BLK"
+        },
+        {
+          "id": "v-007-4",
+          "size": "32",
+          "color": "Kaki Militaire",
+          "colorHex": "#404639",
+          "stock": 3,
+          "sku": "HPC-CRG-007-32-KHK"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 15,
+      "createdAt": "2026-02-18T11:00:00Z",
+      "updatedAt": "2026-02-18T11:00:00Z"
+    },
+    {
+      "id": "prod-008",
+      "sku": "HPC-ACC-008",
+      "name": "Sacoche Bandoulière Tactique HP Sling Pro",
+      "slug": "sacoche-bandouliere-tactique-hp-sling-pro",
+      "category": "accessoires",
+      "description": "L’accessoire indispensable pour circuler avec style à Cotonou. Compartiment principal rembourré pour grand smartphone et portefeuille, sangle jacquard réglable avec boucle magnétique Fidlock et zip étanche.",
+      "details": [
+        "Cordura 1000D étanche et résistant aux éraflures",
+        "Boucle de déverrouillage magnétique instantané",
+        "Porte-mousqueton aluminium anodisé noir"
+      ],
+      "materials": "100% Cordura nylon balistique résistant à l’eau",
+      "careAdvice": "Nettoyage en surface avec une éponge propre et tiède.",
+      "price": 22000,
+      "images": [
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "Unique"
+      ],
+      "colors": [
+        {
+          "name": "Noir Tactique",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-008-1",
+          "size": "Unique",
+          "color": "Noir Tactique",
+          "colorHex": "#171717",
+          "stock": 9,
+          "sku": "HPC-ACC-008-UNI-BLK"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 9,
+      "createdAt": "2026-02-25T16:00:00Z",
+      "updatedAt": "2026-02-25T16:00:00Z"
+    },
+    {
+      "id": "prod-exp-001",
+      "sku": "HPC-SNK-009",
+      "name": "Sneakers HP Dunk Low « Vintage Bone & Forest »",
+      "slug": "sneakers-hp-dunk-low-vintage-bone-forest",
+      "category": "sneakers",
+      "description": "Silhouette rétro intemporelle alliant cuir blanc ivoire vieilli et empiècements vert forêt profond. Semelle intermédiaire jaunie d’inspiration vintage avec amorti intérieur en mousse dense pour une marche sans effort.",
+      "details": [
+        "Cuir véritable souple traité avec effet vintage patiné",
+        "Col bas matelassé et doublure mesh respirante",
+        "Semelle extérieure crantée en caoutchouc résistant"
+      ],
+      "materials": "100% Cuir et caoutchouc",
+      "careAdvice": "Nettoyer avec un chiffon humide et un spray protecteur.",
+      "price": 54000,
+      "images": [
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Ivoire & Vert Forêt",
+          "hex": "#1e3a2f"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-001-1",
+          "size": "41",
+          "color": "Ivoire & Vert Forêt",
+          "colorHex": "#1e3a2f",
+          "stock": 4,
+          "sku": "HPC-SNK-009-41"
+        },
+        {
+          "id": "v-exp-001-2",
+          "size": "42",
+          "color": "Ivoire & Vert Forêt",
+          "colorHex": "#1e3a2f",
+          "stock": 6,
+          "sku": "HPC-SNK-009-42"
+        },
+        {
+          "id": "v-exp-001-3",
+          "size": "43",
+          "color": "Ivoire & Vert Forêt",
+          "colorHex": "#1e3a2f",
+          "stock": 5,
+          "sku": "HPC-SNK-009-43"
+        },
+        {
+          "id": "v-exp-001-4",
+          "size": "44",
+          "color": "Ivoire & Vert Forêt",
+          "colorHex": "#1e3a2f",
+          "stock": 3,
+          "sku": "HPC-SNK-009-44"
+        },
+        {
+          "id": "v-exp-001-5",
+          "size": "45",
+          "color": "Ivoire & Vert Forêt",
+          "colorHex": "#1e3a2f",
+          "stock": 2,
+          "sku": "HPC-SNK-009-45"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 20,
+      "createdAt": "2026-03-06T10:00:00Z",
+      "updatedAt": "2026-03-06T10:00:00Z"
+    },
+    {
+      "id": "prod-exp-002",
+      "sku": "HPC-SRV-010",
+      "name": "Ensemble Cargo Techwear « Tactical Shadow »",
+      "slug": "ensemble-cargo-techwear-tactical-shadow",
+      "category": "survetements",
+      "description": "Ensemble technique complet comprenant une veste coupe-vent à demi-zip avec sangle pectorale et un pantalon cargo multipoches assorti. Tissu imperméable respirant résistant aux averses de Cotonou.",
+      "details": [
+        "Toile technique déperlante et légère",
+        "Poches étanches zippées avec tirettes en paracorde",
+        "Bas de jambes resserrables par élastiques de blocage"
+      ],
+      "materials": "100% Nylon déperlant ripstop",
+      "careAdvice": "Lavage en machine à froid à 30°C.",
+      "price": 52000,
+      "salePrice": 48000,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Carbone",
+          "hex": "#171717"
+        },
+        {
+          "name": "Gris Béton",
+          "hex": "#4b5563"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-002-1",
+          "size": "M",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-SRV-010-M-BLK"
+        },
+        {
+          "id": "v-exp-002-2",
+          "size": "L",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 6,
+          "sku": "HPC-SRV-010-L-BLK"
+        },
+        {
+          "id": "v-exp-002-3",
+          "size": "XL",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-SRV-010-XL-BLK"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 13,
+      "createdAt": "2026-03-06T11:00:00Z",
+      "updatedAt": "2026-03-06T11:00:00Z"
+    },
+    {
+      "id": "prod-exp-003",
+      "sku": "HPC-SNK-011",
+      "name": "Baskets Chunky Runner « Phantom Grey » Amorti Air",
+      "slug": "baskets-chunky-runner-phantom-grey-amorti-air",
+      "category": "sneakers",
+      "description": "La tendance dad-shoe réinventée avec une semelle sculptée ultra-dynamique. Superposition de mesh technique aéré et de renforts en cuir suédé gris acier, parfaite avec un jean baggy tombant.",
+      "details": [
+        "Semelle oversize légère avec absorption des chocs au talon",
+        "Empiècements réfléchissants 3M pour visibilité nocturne",
+        "Semelle intérieure anatomique amovible"
+      ],
+      "materials": "Mesh respirant, suède et gomme EVA haute absorption",
+      "careAdvice": "Brosser à sec avec une brosse spéciale suède.",
+      "price": 49000,
+      "images": [
+        "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "colors": [
+        {
+          "name": "Gris Fantôme & Argent",
+          "hex": "#64748b"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-003-1",
+          "size": "41",
+          "color": "Gris Fantôme & Argent",
+          "colorHex": "#64748b",
+          "stock": 3,
+          "sku": "HPC-SNK-011-41"
+        },
+        {
+          "id": "v-exp-003-2",
+          "size": "42",
+          "color": "Gris Fantôme & Argent",
+          "colorHex": "#64748b",
+          "stock": 5,
+          "sku": "HPC-SNK-011-42"
+        },
+        {
+          "id": "v-exp-003-3",
+          "size": "43",
+          "color": "Gris Fantôme & Argent",
+          "colorHex": "#64748b",
+          "stock": 4,
+          "sku": "HPC-SNK-011-43"
+        },
+        {
+          "id": "v-exp-003-4",
+          "size": "44",
+          "color": "Gris Fantôme & Argent",
+          "colorHex": "#64748b",
+          "stock": 2,
+          "sku": "HPC-SNK-011-44"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 2,
+      "totalStock": 14,
+      "createdAt": "2026-03-06T12:00:00Z",
+      "updatedAt": "2026-03-06T12:00:00Z"
+    },
+    {
+      "id": "prod-exp-004",
+      "sku": "HPC-TSH-012",
+      "name": "T-shirt Graphic Oversize « City of Ambition » 260 GSM",
+      "slug": "t-shirt-graphic-oversize-city-of-ambition-260-gsm",
+      "category": "tshirts",
+      "description": "Graphisme exclusif dos représentant l’énergie nocturne de Cotonou et le logo HP Collection en sérigraphie relief. Jersey de coton lourd 260 GSM d’une tenue impeccable.",
+      "details": [
+        "Coton peigné 260 GSM ultra-lourd",
+        "Col ras-du-cou épais indéformable",
+        "Coupe oversize tombante sur les épaules"
+      ],
+      "materials": "100% Coton peigné haut de gamme",
+      "careAdvice": "Laver à l’envers à 30°C.",
+      "price": 19000,
+      "images": [
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Onyx",
+          "hex": "#171717"
+        },
+        {
+          "name": "Blanc Ivoire",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-004-1",
+          "size": "M",
+          "color": "Noir Onyx",
+          "colorHex": "#171717",
+          "stock": 8,
+          "sku": "HPC-TSH-012-M-BLK"
+        },
+        {
+          "id": "v-exp-004-2",
+          "size": "L",
+          "color": "Noir Onyx",
+          "colorHex": "#171717",
+          "stock": 12,
+          "sku": "HPC-TSH-012-L-BLK"
+        },
+        {
+          "id": "v-exp-004-3",
+          "size": "XL",
+          "color": "Noir Onyx",
+          "colorHex": "#171717",
+          "stock": 7,
+          "sku": "HPC-TSH-012-XL-BLK"
+        },
+        {
+          "id": "v-exp-004-4",
+          "size": "M",
+          "color": "Blanc Ivoire",
+          "colorHex": "#F4F1E9",
+          "stock": 6,
+          "sku": "HPC-TSH-012-M-WHT"
+        },
+        {
+          "id": "v-exp-004-5",
+          "size": "L",
+          "color": "Blanc Ivoire",
+          "colorHex": "#F4F1E9",
+          "stock": 9,
+          "sku": "HPC-TSH-012-L-WHT"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 4,
+      "totalStock": 42,
+      "createdAt": "2026-03-06T13:00:00Z",
+      "updatedAt": "2026-03-06T13:00:00Z"
+    },
+    {
+      "id": "prod-exp-005",
+      "sku": "HPC-BMB-013",
+      "name": "Veste Bomber Matelassée Réversible « Black & Khaki »",
+      "slug": "veste-bomber-matelassee-reversible-black-khaki",
+      "category": "varsity",
+      "description": "Deux styles en une seule pièce maîtresse. Côté face en sergé satiné noir profond imperméable, côté revers en kaki militaire matelassé avec poche zippée d’aviateur sur le bras gauche.",
+      "details": [
+        "Entièrement réversible avec double zip rotatif renforcé",
+        "Bords-côtes élastiques épais aux poignets et à la taille",
+        "Poche utilitaire d’aviation sur la manche"
+      ],
+      "materials": "100% Nylon satiné haute densité",
+      "careAdvice": "Nettoyage à sec recommandé.",
+      "price": 58000,
+      "images": [
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Kaki",
+          "hex": "#1c1c1c"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-005-1",
+          "size": "M",
+          "color": "Noir & Kaki",
+          "colorHex": "#1c1c1c",
+          "stock": 3,
+          "sku": "HPC-BMB-013-M"
+        },
+        {
+          "id": "v-exp-005-2",
+          "size": "L",
+          "color": "Noir & Kaki",
+          "colorHex": "#1c1c1c",
+          "stock": 5,
+          "sku": "HPC-BMB-013-L"
+        },
+        {
+          "id": "v-exp-005-3",
+          "size": "XL",
+          "color": "Noir & Kaki",
+          "colorHex": "#1c1c1c",
+          "stock": 3,
+          "sku": "HPC-BMB-013-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 2,
+      "totalStock": 11,
+      "createdAt": "2026-03-06T14:00:00Z",
+      "updatedAt": "2026-03-06T14:00:00Z"
+    },
+    {
+      "id": "prod-exp-006",
+      "sku": "HPC-PNT-014",
+      "name": "Pantalon Baggy Parachute Double Ceinture « Stealth »",
+      "slug": "pantalon-baggy-parachute-double-ceinture-stealth",
+      "category": "pantalons",
+      "description": "Volume architectural ample avec système de double serrage à la taille et aux chevilles. Toile parachute légère et infroissable qui bouge avec fluidité à chaque pas.",
+      "details": [
+        "Pinces d’aisance anatomiques aux genoux",
+        "Doubles sangles de serrage rapides intégrées",
+        "Poches obliques profondes sécurisées"
+      ],
+      "materials": "70% Coton parachute, 30% Polyamide technique",
+      "careAdvice": "Lavage en machine délicat à 30°C.",
+      "price": 32000,
+      "images": [
+        "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "colors": [
+        {
+          "name": "Noir Matte",
+          "hex": "#171717"
+        },
+        {
+          "name": "Gris Charbon",
+          "hex": "#374151"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-006-1",
+          "size": "30",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-PNT-014-30"
+        },
+        {
+          "id": "v-exp-006-2",
+          "size": "32",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 7,
+          "sku": "HPC-PNT-014-32"
+        },
+        {
+          "id": "v-exp-006-3",
+          "size": "34",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-PNT-014-34"
+        },
+        {
+          "id": "v-exp-006-4",
+          "size": "36",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-PNT-014-36"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 19,
+      "createdAt": "2026-03-06T15:00:00Z",
+      "updatedAt": "2026-03-06T15:00:00Z"
+    },
+    {
+      "id": "prod-exp-007",
+      "sku": "HPC-ACC-015",
+      "name": "Ceinture Cuir Western à Boucle Crâne & Strass",
+      "slug": "ceinture-cuir-western-boucle-crane-strass",
+      "category": "accessoires",
+      "description": "Inspirée du look Cyber Drip emblématique. Cuir noir grainé épais avec boucle imposante en alliage argenté vieilli ornée de motifs crâne sculptés et de cabochons brillants.",
+      "details": [
+        "Cuir véritable pleine fleur largeur 4 cm",
+        "Boucle ardillon en métal massif finition antique",
+        "Longueur réglable (95 à 115 cm)"
+      ],
+      "materials": "100% Cuir et métal",
+      "careAdvice": "Entretenir avec une cire incolore pour cuir.",
+      "price": 16000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "Unique"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Argent Antique",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-007-1",
+          "size": "Unique",
+          "color": "Noir & Argent Antique",
+          "colorHex": "#171717",
+          "stock": 11,
+          "sku": "HPC-ACC-015-UNI"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 11,
+      "createdAt": "2026-03-06T16:00:00Z",
+      "updatedAt": "2026-03-06T16:00:00Z"
+    },
+    {
+      "id": "prod-exp-008",
+      "sku": "HPC-SRV-016",
+      "name": "Survêtement Velours Côtelé Rétro « Midnight Navy »",
+      "slug": "survetement-velours-cotele-retro-midnight-navy",
+      "category": "survetements",
+      "description": "Texture rétro luxueuse en velours côtelé doux au toucher. Veste zippée col cheminée et pantalon fuselé assorti, broderie monogramme HP Collection en fil doré discret.",
+      "details": [
+        "Velours côtelé doux et chaud",
+        "Zips dorés en laiton brossé YKK",
+        "Bord-côte extensible et résistant"
+      ],
+      "materials": "95% Coton velours, 5% Élasthanne",
+      "careAdvice": "Lavage doux sur l’envers à 30°C.",
+      "price": 46000,
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Bleu Nuit Profond",
+          "hex": "#1e293b"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-008-1",
+          "size": "M",
+          "color": "Bleu Nuit Profond",
+          "colorHex": "#1e293b",
+          "stock": 3,
+          "sku": "HPC-SRV-016-M"
+        },
+        {
+          "id": "v-exp-008-2",
+          "size": "L",
+          "color": "Bleu Nuit Profond",
+          "colorHex": "#1e293b",
+          "stock": 5,
+          "sku": "HPC-SRV-016-L"
+        },
+        {
+          "id": "v-exp-008-3",
+          "size": "XL",
+          "color": "Bleu Nuit Profond",
+          "colorHex": "#1e293b",
+          "stock": 2,
+          "sku": "HPC-SRV-016-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 10,
+      "createdAt": "2026-03-06T17:00:00Z",
+      "updatedAt": "2026-03-06T17:00:00Z"
+    },
+    {
+      "id": "prod-exp-009",
+      "sku": "HPC-SNK-017",
+      "name": "Sneakers HP Star Low « Cotonou Sunset » Édition Limitée",
+      "slug": "sneakers-hp-star-low-cotonou-sunset-edition-limitee",
+      "category": "sneakers",
+      "description": "Inspirée des teintes crépusculaires de la plage de Fidjrossè. Cuir verni éclatant mariant l’orange brûlé, le noir et le blanc cassé avec étoile HP brodée sur le flanc.",
+      "details": [
+        "Cuir verni glacé ultra-résistant aux rayures",
+        "Semelle extérieure translucide bicolore",
+        "Passants de lacets renforcés"
+      ],
+      "materials": "Cuir verni de première qualité et caoutchouc naturel",
+      "careAdvice": "Nettoyer avec un chiffon doux légèrement humide.",
+      "price": 58000,
+      "images": [
+        "https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "colors": [
+        {
+          "name": "Coucher de Soleil & Noir",
+          "hex": "#ea580c"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-009-1",
+          "size": "41",
+          "color": "Coucher de Soleil & Noir",
+          "colorHex": "#ea580c",
+          "stock": 2,
+          "sku": "HPC-SNK-017-41"
+        },
+        {
+          "id": "v-exp-009-2",
+          "size": "42",
+          "color": "Coucher de Soleil & Noir",
+          "colorHex": "#ea580c",
+          "stock": 4,
+          "sku": "HPC-SNK-017-42"
+        },
+        {
+          "id": "v-exp-009-3",
+          "size": "43",
+          "color": "Coucher de Soleil & Noir",
+          "colorHex": "#ea580c",
+          "stock": 3,
+          "sku": "HPC-SNK-017-43"
+        },
+        {
+          "id": "v-exp-009-4",
+          "size": "44",
+          "color": "Coucher de Soleil & Noir",
+          "colorHex": "#ea580c",
+          "stock": 2,
+          "sku": "HPC-SNK-017-44"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 11,
+      "createdAt": "2026-03-06T18:00:00Z",
+      "updatedAt": "2026-03-06T18:00:00Z"
+    },
+    {
+      "id": "prod-exp-010",
+      "sku": "HPC-ACC-018",
+      "name": "Casquette 5-Panel Broderie Relief HP « Signature »",
+      "slug": "casquette-5-panel-broderie-relief-hp-signature",
+      "category": "accessoires",
+      "description": "Visière plate semi-rigide avec couronne structurée en sergé de coton lourd. Broderie 3D haute densité « HP » en fil or vieilli à l’avant et patte de réglage métallique à l’arrière.",
+      "details": [
+        "Toile sergée 100% coton 320 GSM",
+        "Boucle de réglage arrière en métal antique",
+        "Bandeau intérieur anti-transpiration molletonné"
+      ],
+      "materials": "100% Coton",
+      "careAdvice": "Nettoyage des taches avec une éponge humide.",
+      "price": 14000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "Unique"
+      ],
+      "colors": [
+        {
+          "name": "Noir Carbone",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-010-1",
+          "size": "Unique",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 15,
+          "sku": "HPC-ACC-018-UNI"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 4,
+      "totalStock": 15,
+      "createdAt": "2026-03-06T19:00:00Z",
+      "updatedAt": "2026-03-06T19:00:00Z"
+    },
+    {
+      "id": "prod-exp-011",
+      "sku": "HPC-VAR-004",
+      "name": "Veste Varsity Cuir Vegan Bicolore Noir & Blanc Crème",
+      "slug": "veste-varsity-cuir-vegan-bicolore-noir-blanc-creme",
+      "category": "varsity",
+      "description": "Veste teddy varsity d’inspiration vintage avec corps en drap de laine vierge noir profond et manches raglan en cuir vegan crème texturé. Patte de boutonnage à pressions émaillées, finitions bord-côte rayé or et noir aux poignets et à la taille. Lettrage HPC brodé en relief sur le torse.",
+      "details": [
+        "Corps en drap de laine lourd 520 GSM et doublure satinée matelassée",
+        "Manches en similicuir grainé souple résistant à la pluie",
+        "Deux poches passepoilées extérieures et une poche portefeuille intérieure",
+        "Broderies d’artisanat chenille sur la poitrine et dans le dos"
+      ],
+      "materials": "Drap de laine, polyuréthane haute densité, doublure polyester satin",
+      "careAdvice": "Nettoyage à sec recommandé. Ne pas repasser directement sur le cuir.",
+      "price": 52000,
+      "images": [
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Crème",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-011-1",
+          "size": "S",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-VAR-004-S"
+        },
+        {
+          "id": "v-exp-011-2",
+          "size": "M",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 7,
+          "sku": "HPC-VAR-004-M"
+        },
+        {
+          "id": "v-exp-011-3",
+          "size": "L",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 6,
+          "sku": "HPC-VAR-004-L"
+        },
+        {
+          "id": "v-exp-011-4",
+          "size": "XL",
+          "color": "Noir & Crème",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-VAR-004-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 20,
+      "createdAt": "2026-03-07T10:00:00Z",
+      "updatedAt": "2026-03-07T10:00:00Z"
+    },
+    {
+      "id": "prod-exp-012",
+      "sku": "HPC-SRV-004",
+      "name": "Survêtement Technique Nylon Crinkle Zip Vert Olive",
+      "slug": "survetement-technique-nylon-crinkle-zip-vert-olive",
+      "category": "survetements",
+      "description": "Ensemble deux pièces veste zippée et pantalon jogging en nylon texturé crinkle résistant à l’eau et ultra-léger. Doublure respirante en mesh aéré, zips étanches contrastés noir et or, cordons élastiques ajustables avec stoppeurs métalliques.",
+      "details": [
+        "Nylon crinkle déperlant ultra-respirant",
+        "Col montant protecteur et poignets élastiqués",
+        "Poches latérales zippées sécurisées sur veste et pantalon",
+        "Fermetures éclair bidirectionnelles métallisées"
+      ],
+      "materials": "100% Nylon technique crinkle, doublure mesh 100% polyester",
+      "careAdvice": "Lavage délicat à l’eau froide. Séchage à l’air libre.",
+      "price": 46000,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Vert Olive Tech",
+          "hex": "#4B5320"
+        },
+        {
+          "name": "Noir Carbone",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-012-1",
+          "size": "M",
+          "color": "Vert Olive Tech",
+          "colorHex": "#4B5320",
+          "stock": 5,
+          "sku": "HPC-SRV-004-V-M"
+        },
+        {
+          "id": "v-exp-012-2",
+          "size": "L",
+          "color": "Vert Olive Tech",
+          "colorHex": "#4B5320",
+          "stock": 6,
+          "sku": "HPC-SRV-004-V-L"
+        },
+        {
+          "id": "v-exp-012-3",
+          "size": "XL",
+          "color": "Vert Olive Tech",
+          "colorHex": "#4B5320",
+          "stock": 4,
+          "sku": "HPC-SRV-004-V-XL"
+        },
+        {
+          "id": "v-exp-012-4",
+          "size": "L",
+          "color": "Noir Carbone",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-SRV-004-N-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 20,
+      "createdAt": "2026-03-07T10:30:00Z",
+      "updatedAt": "2026-03-07T10:30:00Z"
+    },
+    {
+      "id": "prod-exp-013",
+      "sku": "HPC-SRV-005",
+      "name": "Ensemble Short Boxy & T-Shirt Heavyweight Sand Dune",
+      "slug": "ensemble-short-boxy-tshirt-heavyweight-sand-dune",
+      "category": "survetements",
+      "description": "Ensemble décontracté estival composé d’un tee-shirt boxy tombant et d’un short ample en molleton éponge french terry premium. Teinture minérale couleur sable chaud, cordons épais en coton écru et sérigraphie discrète HP Collection.",
+      "details": [
+        "Molleton éponge French Terry 100% coton peigné 360 GSM",
+        "Short à taille élastique avec cordons de serrage tressés",
+        "Poches profondes latérales et poche plaquée arrière",
+        "T-shirt coupe carrée à col ras-du-cou côtelé épais"
+      ],
+      "materials": "100% Coton peigné French Terry",
+      "careAdvice": "Lavage en machine à 30°C. Repassage doux à l’envers.",
+      "price": 38000,
+      "images": [
+        "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Sable Désert",
+          "hex": "#C2B280"
+        },
+        {
+          "name": "Gris Chiné",
+          "hex": "#8E9297"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-013-1",
+          "size": "M",
+          "color": "Sable Désert",
+          "colorHex": "#C2B280",
+          "stock": 6,
+          "sku": "HPC-SRV-005-S-M"
+        },
+        {
+          "id": "v-exp-013-2",
+          "size": "L",
+          "color": "Sable Désert",
+          "colorHex": "#C2B280",
+          "stock": 7,
+          "sku": "HPC-SRV-005-S-L"
+        },
+        {
+          "id": "v-exp-013-3",
+          "size": "XL",
+          "color": "Sable Désert",
+          "colorHex": "#C2B280",
+          "stock": 4,
+          "sku": "HPC-SRV-005-S-XL"
+        },
+        {
+          "id": "v-exp-013-4",
+          "size": "L",
+          "color": "Gris Chiné",
+          "colorHex": "#8E9297",
+          "stock": 5,
+          "sku": "HPC-SRV-005-G-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 22,
+      "createdAt": "2026-03-07T11:00:00Z",
+      "updatedAt": "2026-03-07T11:00:00Z"
+    },
+    {
+      "id": "prod-exp-014",
+      "sku": "HPC-TSH-004",
+      "name": "T-Shirt Oversize Graphic « Cotonou Underground » Lavis Gris",
+      "slug": "t-shirt-oversize-graphic-cotonou-underground-lavis-gris",
+      "category": "tshirts",
+      "description": "Tee-shirt urbain coupe oversize tombante avec effet délavé vintage acid wash. Impression sérigraphique au dos célébrant la scène urbaine et l’énergie de Cotonou avec des touches dorées et blanches. Col serré indéformable renforcé.",
+      "details": [
+        "Toile jersey 100% coton peigné ultra-lourd 260 GSM",
+        "Effet délavé aux pigments naturels style grunge / streetwear 90s",
+        "Sérigraphie dos grand format au toucher soyeux",
+        "Étiquette tissée HP Collection cousue sur l’ourlet inférieur"
+      ],
+      "materials": "100% Coton peigné lourd",
+      "careAdvice": "Laver et repasser sur l’envers pour préserver l’imprimé.",
+      "price": 19000,
+      "images": [
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Gris Acid Wash",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Noir Décoloré",
+          "hex": "#2B2B2B"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-014-1",
+          "size": "M",
+          "color": "Gris Acid Wash",
+          "colorHex": "#4A4A4A",
+          "stock": 8,
+          "sku": "HPC-TSH-004-G-M"
+        },
+        {
+          "id": "v-exp-014-2",
+          "size": "L",
+          "color": "Gris Acid Wash",
+          "colorHex": "#4A4A4A",
+          "stock": 10,
+          "sku": "HPC-TSH-004-G-L"
+        },
+        {
+          "id": "v-exp-014-3",
+          "size": "XL",
+          "color": "Gris Acid Wash",
+          "colorHex": "#4A4A4A",
+          "stock": 6,
+          "sku": "HPC-TSH-004-G-XL"
+        },
+        {
+          "id": "v-exp-014-4",
+          "size": "L",
+          "color": "Noir Décoloré",
+          "colorHex": "#2B2B2B",
+          "stock": 6,
+          "sku": "HPC-TSH-004-N-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 4,
+      "totalStock": 30,
+      "createdAt": "2026-03-07T11:30:00Z",
+      "updatedAt": "2026-03-07T11:30:00Z"
+    },
+    {
+      "id": "prod-exp-015",
+      "sku": "HPC-TSH-005",
+      "name": "Polo Maille Côtelée Zip Métal Noir & Liseré Or",
+      "slug": "polo-maille-cotelee-zip-metal-noir-lisere-or",
+      "category": "tshirts",
+      "description": "Polo contemporain en tricot de coton peigné texturé à côtes verticales fines. Col polo rigide sans boutons, fermé par un quart de zip métallique couleur or vieilli gravé. Finition liseré doré aux bordures de manches.",
+      "details": [
+        "Tricot maille fine 100% coton respirant haut de gamme",
+        "Zip métallique antique YKK anti-blocage",
+        "Coupe ajustée moderne épousant les épaules",
+        "Fentes d’aisance renforcées sur les côtés"
+      ],
+      "materials": "100% Coton peigné doux texturé",
+      "careAdvice": "Lavage délicat à 30°C. Séchage à plat.",
+      "price": 26000,
+      "images": [
+        "https://images.unsplash.com/photo-1625910513413-5bc595960010?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Liseré Or",
+          "hex": "#171717"
+        },
+        {
+          "name": "Blanc Cassé Épuré",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-015-1",
+          "size": "M",
+          "color": "Noir & Liseré Or",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-TSH-005-N-M"
+        },
+        {
+          "id": "v-exp-015-2",
+          "size": "L",
+          "color": "Noir & Liseré Or",
+          "colorHex": "#171717",
+          "stock": 7,
+          "sku": "HPC-TSH-005-N-L"
+        },
+        {
+          "id": "v-exp-015-3",
+          "size": "XL",
+          "color": "Noir & Liseré Or",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-TSH-005-N-XL"
+        },
+        {
+          "id": "v-exp-015-4",
+          "size": "L",
+          "color": "Blanc Cassé Épuré",
+          "colorHex": "#F4F1E9",
+          "stock": 5,
+          "sku": "HPC-TSH-005-B-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 21,
+      "createdAt": "2026-03-07T12:00:00Z",
+      "updatedAt": "2026-03-07T12:00:00Z"
+    },
+    {
+      "id": "prod-exp-016",
+      "sku": "HPC-HOD-004",
+      "name": "Hoodie Zip Heavyweight 480g Double Épaisseur Anthracite",
+      "slug": "hoodie-zip-heavyweight-480g-double-epaisseur-anthracite",
+      "category": "hoodies",
+      "description": "Le sweat à capuche zippé ultime conçu pour durer des années. Molleton double face ultra-dense 480 GSM brossé à l’intérieur pour une douceur extrême. Capuche doublée thermo-formée tenant naturellement droite, zip lourd métallique.",
+      "details": [
+        "Toile molleton lourd 480 GSM pré-rétrécie",
+        "Capuche double couche structurée sans effet d’affaissement",
+        "Zip frontal métallique pleine longueur double curseur",
+        "Empiècements en bord-côte extensible aux flancs"
+      ],
+      "materials": "85% Coton peigné lourd, 15% Polyester résistant",
+      "careAdvice": "Lavage en machine à froid. Repassage modéré.",
+      "price": 36000,
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Anthracite Foncé",
+          "hex": "#2F3136"
+        },
+        {
+          "name": "Noir Pur",
+          "hex": "#111111"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-016-1",
+          "size": "M",
+          "color": "Anthracite Foncé",
+          "colorHex": "#2F3136",
+          "stock": 4,
+          "sku": "HPC-HOD-004-A-M"
+        },
+        {
+          "id": "v-exp-016-2",
+          "size": "L",
+          "color": "Anthracite Foncé",
+          "colorHex": "#2F3136",
+          "stock": 8,
+          "sku": "HPC-HOD-004-A-L"
+        },
+        {
+          "id": "v-exp-016-3",
+          "size": "XL",
+          "color": "Anthracite Foncé",
+          "colorHex": "#2F3136",
+          "stock": 5,
+          "sku": "HPC-HOD-004-A-XL"
+        },
+        {
+          "id": "v-exp-016-4",
+          "size": "L",
+          "color": "Noir Pur",
+          "colorHex": "#111111",
+          "stock": 6,
+          "sku": "HPC-HOD-004-N-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 3,
+      "totalStock": 23,
+      "createdAt": "2026-03-07T12:30:00Z",
+      "updatedAt": "2026-03-07T12:30:00Z"
+    },
+    {
+      "id": "prod-exp-017",
+      "sku": "HPC-HOD-005",
+      "name": "Sweat Col Rond Minimaliste Broderie HPC Ton sur Ton",
+      "slug": "sweat-col-rond-minimaliste-broderie-hpc-ton-sur-ton",
+      "category": "hoodies",
+      "description": "Sweatshirt crewneck à la coupe contemporaine boxy. Manches raglan confortables, col montant rond serré et broderie compacte en fil satin noir « HP COLLECTION » centrée sous l’encolure.",
+      "details": [
+        "Molleton éponge doux 380 GSM",
+        "Broderie micro-lettrage ton sur ton discrète",
+        "Coutures plates flatlock anti-irritation",
+        "Bord-côte élastique mémoire de forme aux poignets"
+      ],
+      "materials": "100% Coton peigné",
+      "careAdvice": "Lavage en machine à 30°C.",
+      "price": 29000,
+      "images": [
+        "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Matte",
+          "hex": "#171717"
+        },
+        {
+          "name": "Écru Brut",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-017-1",
+          "size": "M",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 6,
+          "sku": "HPC-HOD-005-N-M"
+        },
+        {
+          "id": "v-exp-017-2",
+          "size": "L",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 7,
+          "sku": "HPC-HOD-005-N-L"
+        },
+        {
+          "id": "v-exp-017-3",
+          "size": "XL",
+          "color": "Noir Matte",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-HOD-005-N-XL"
+        },
+        {
+          "id": "v-exp-017-4",
+          "size": "L",
+          "color": "Écru Brut",
+          "colorHex": "#F4F1E9",
+          "stock": 4,
+          "sku": "HPC-HOD-005-E-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 21,
+      "createdAt": "2026-03-07T13:00:00Z",
+      "updatedAt": "2026-03-07T13:00:00Z"
+    },
+    {
+      "id": "prod-exp-018",
+      "sku": "HPC-PAN-004",
+      "name": "Jean Charpentier Carpenter Denim Brut Surpiqûres Écrues",
+      "slug": "jean-charpentier-carpenter-denim-brut-surpiqures-ecrues",
+      "category": "pantalons",
+      "description": "Pantalon de travailleur urbain en denim rigide non lavé 14.5 oz. Équipé d’une boucle porte-marteau latérale, de doubles empiècements genoux rivetés et de surpiqûres contrastées fil crème.",
+      "details": [
+        "Toile denim brute 100% coton selvedge look",
+        "Doubles genouillères de renfort avec rivets en cuivre massif",
+        "Boucle utilitaire authentique sur la jambe gauche",
+        "Coupe ample straight-leg décontractée"
+      ],
+      "materials": "100% Coton denim haute densité",
+      "careAdvice": "Laver séparément les premières fois. Ne pas essorer fort.",
+      "price": 36000,
+      "images": [
+        "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "colors": [
+        {
+          "name": "Denim Brut Indigo",
+          "hex": "#1C2951"
+        },
+        {
+          "name": "Noir Lavé",
+          "hex": "#262626"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-018-1",
+          "size": "30",
+          "color": "Denim Brut Indigo",
+          "colorHex": "#1C2951",
+          "stock": 3,
+          "sku": "HPC-PAN-004-I-30"
+        },
+        {
+          "id": "v-exp-018-2",
+          "size": "32",
+          "color": "Denim Brut Indigo",
+          "colorHex": "#1C2951",
+          "stock": 6,
+          "sku": "HPC-PAN-004-I-32"
+        },
+        {
+          "id": "v-exp-018-3",
+          "size": "34",
+          "color": "Denim Brut Indigo",
+          "colorHex": "#1C2951",
+          "stock": 5,
+          "sku": "HPC-PAN-004-I-34"
+        },
+        {
+          "id": "v-exp-018-4",
+          "size": "32",
+          "color": "Noir Lavé",
+          "colorHex": "#262626",
+          "stock": 4,
+          "sku": "HPC-PAN-004-N-32"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 18,
+      "createdAt": "2026-03-07T13:30:00Z",
+      "updatedAt": "2026-03-07T13:30:00Z"
+    },
+    {
+      "id": "prod-exp-019",
+      "sku": "HPC-PAN-005",
+      "name": "Pantalon Parachute Fluide à Cordons de Serrage Gris Pierre",
+      "slug": "pantalon-parachute-fluide-cordons-serrage-gris-pierre",
+      "category": "pantalons",
+      "description": "Silhouette balloon ultralégère en nylon doux au toucher pêche. Plis ergonomiques aux genoux pour créer un volume sculptural, chevilles ajustables par élastiques de serrage dissimulés.",
+      "details": [
+        "Toile technique déperlante et aérée",
+        "Ceinture élastiquée avec cordon coulissant intérieur",
+        "Plis d’aisance anatomiques aux rotules",
+        "Poches cargo plates discrètes sans surépaisseur"
+      ],
+      "materials": "92% Polyamide technique, 8% Élasthanne",
+      "careAdvice": "Lavage en machine à 30°C. Séchage rapide.",
+      "price": 32000,
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Gris Pierre",
+          "hex": "#777D86"
+        },
+        {
+          "name": "Noir Nuit",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-019-1",
+          "size": "M",
+          "color": "Gris Pierre",
+          "colorHex": "#777D86",
+          "stock": 6,
+          "sku": "HPC-PAN-005-P-M"
+        },
+        {
+          "id": "v-exp-019-2",
+          "size": "L",
+          "color": "Gris Pierre",
+          "colorHex": "#777D86",
+          "stock": 7,
+          "sku": "HPC-PAN-005-P-L"
+        },
+        {
+          "id": "v-exp-019-3",
+          "size": "XL",
+          "color": "Gris Pierre",
+          "colorHex": "#777D86",
+          "stock": 4,
+          "sku": "HPC-PAN-005-P-XL"
+        },
+        {
+          "id": "v-exp-019-4",
+          "size": "L",
+          "color": "Noir Nuit",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-PAN-005-N-L"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 22,
+      "createdAt": "2026-03-07T14:00:00Z",
+      "updatedAt": "2026-03-07T14:00:00Z"
+    },
+    {
+      "id": "prod-exp-020",
+      "sku": "HPC-SNK-004",
+      "name": "Sneakers Skate Chunky Semelle Gum Suède & Toile",
+      "slug": "sneakers-skate-chunky-semelle-gum-suede-toile",
+      "category": "sneakers",
+      "description": "Inspirée de la culture skate des années 2000, cette paire affiche une languette matelassée ultra-épaisse, des lacets larges plats en coton brut et une semelle cupsole couleur gomme naturelle.",
+      "details": [
+        "Empiècements en suède véritable et toile canevas résistante",
+        "Languette et col rembourrés en mousse haute densité",
+        "Lacets tubulaires larges 15mm de rechange inclus",
+        "Semelle extérieure en gomme naturelle antidérapante"
+      ],
+      "materials": "Cuir suédé véritable, toile coton, semelle gomme vulcanisée",
+      "careAdvice": "Brosser à sec avec une brosse spéciale daim/suède.",
+      "price": 44000,
+      "images": [
+        "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Gum",
+          "hex": "#171717"
+        },
+        {
+          "name": "Beige Crème",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-020-1",
+          "size": "41",
+          "color": "Noir & Gum",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-SNK-004-N-41"
+        },
+        {
+          "id": "v-exp-020-2",
+          "size": "42",
+          "color": "Noir & Gum",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-SNK-004-N-42"
+        },
+        {
+          "id": "v-exp-020-3",
+          "size": "43",
+          "color": "Noir & Gum",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-SNK-004-N-43"
+        },
+        {
+          "id": "v-exp-020-4",
+          "size": "44",
+          "color": "Noir & Gum",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-SNK-004-N-44"
+        },
+        {
+          "id": "v-exp-020-5",
+          "size": "42",
+          "color": "Beige Crème",
+          "colorHex": "#F4F1E9",
+          "stock": 3,
+          "sku": "HPC-SNK-004-B-42"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 18,
+      "createdAt": "2026-03-07T14:30:00Z",
+      "updatedAt": "2026-03-07T14:30:00Z"
+    },
+    {
+      "id": "prod-exp-021",
+      "sku": "HPC-BSK-003",
+      "name": "Baskets Montantes Retro High Top Noir & Or Vieilli",
+      "slug": "baskets-montantes-retro-high-top-noir-or-vieilli",
+      "category": "basket",
+      "description": "Sneakers montantes de basket au profil aérodynamique. Cuir pleine fleur ciré avec détails dorés subtils au niveau des œillets et du contrefort talon. Amorti à coussin d’air encastré pour absorption des chocs.",
+      "details": [
+        "Tige montante maintenant la cheville fermement",
+        "Cuir synthétique renforcé et cuir pleine fleur grainé",
+        "Semelle intercalaire EVA amortissante",
+        "Semelle extérieure à chevrons multidirectionnels pour les parquets et le goudron"
+      ],
+      "materials": "Cuir premium, semelle intermédiaire EVA, semelle caoutchouc",
+      "careAdvice": "Nettoyer avec un chiffon humide et du savon doux.",
+      "price": 54000,
+      "images": [
+        "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Or",
+          "hex": "#C7A747"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-021-1",
+          "size": "41",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 3,
+          "sku": "HPC-BSK-003-41"
+        },
+        {
+          "id": "v-exp-021-2",
+          "size": "42",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 5,
+          "sku": "HPC-BSK-003-42"
+        },
+        {
+          "id": "v-exp-021-3",
+          "size": "43",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 4,
+          "sku": "HPC-BSK-003-43"
+        },
+        {
+          "id": "v-exp-021-4",
+          "size": "44",
+          "color": "Noir & Or",
+          "colorHex": "#C7A747",
+          "stock": 3,
+          "sku": "HPC-BSK-003-44"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 2,
+      "totalStock": 15,
+      "createdAt": "2026-03-07T15:00:00Z",
+      "updatedAt": "2026-03-07T15:00:00Z"
+    },
+    {
+      "id": "prod-exp-022",
+      "sku": "HPC-ACC-004",
+      "name": "Sac Banane Cuir Grainé Tactique Modular Crossbody",
+      "slug": "sac-banane-cuir-graine-tactique-modular-crossbody",
+      "category": "accessoires",
+      "description": "Sacoche ventrale ou bandoulière en cuir vegan grainé noir étanche. Dotée de compartiments doubles zippés pour smartphone, portefeuille et écouteurs. Boucle cobra métallique à ouverture rapide.",
+      "details": [
+        "Cuir vegan grainé ultra-résistant aux rayures",
+        "Fermoirs zippés étanches avec tirettes en paracorde noire",
+        "Boucle tactique métallique à dégagement instantané",
+        "Sangle en nylon balistique réglable de 80 à 135 cm"
+      ],
+      "materials": "Cuir vegan grainé, sangle nylon militaire, boucle zinc",
+      "careAdvice": "Nettoyage au chiffon doux.",
+      "price": 21000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "Unique"
+      ],
+      "colors": [
+        {
+          "name": "Noir Tactique",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-022-1",
+          "size": "Unique",
+          "color": "Noir Tactique",
+          "colorHex": "#171717",
+          "stock": 12,
+          "sku": "HPC-ACC-004-UNI"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 12,
+      "createdAt": "2026-03-07T15:30:00Z",
+      "updatedAt": "2026-03-07T15:30:00Z"
+    },
+    {
+      "id": "prod-exp-023",
+      "sku": "HPC-VAR-006",
+      "name": "Blouson Bomber Réversible Satin Noir & Broderie Or Tigre",
+      "slug": "blouson-bomber-reversible-satin-noir-broderie-or-tigre",
+      "category": "varsity",
+      "description": "Bomber réversible d’inspiration sukajan japonaise et streetwear parisien. Côté face : satin de soie synthétique noir profond avec broderie féline or brossé au dos. Côté pile : nylon technique mat déperlant.",
+      "details": [
+        "Coupe boxy bomber oversize avec épaules tombantes",
+        "Bords-côtes rayés noir et or satiné aux poignets et col",
+        "Fermeture zippée double curseur métallique or vieilli",
+        "Deux poches cavalières pressionnées de chaque côté"
+      ],
+      "materials": "Satin polyester premium 320g, garnissage ouate thermique légère",
+      "careAdvice": "Nettoyage à sec uniquement.",
+      "price": 45000,
+      "images": [
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Or Sukajan",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-023-1",
+          "size": "M",
+          "color": "Noir & Or Sukajan",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-VAR-006-M"
+        },
+        {
+          "id": "v-exp-023-2",
+          "size": "L",
+          "color": "Noir & Or Sukajan",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-VAR-006-L"
+        },
+        {
+          "id": "v-exp-023-3",
+          "size": "XL",
+          "color": "Noir & Or Sukajan",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-VAR-006-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 12,
+      "createdAt": "2026-03-08T10:00:00Z",
+      "updatedAt": "2026-03-08T10:00:00Z"
+    },
+    {
+      "id": "prod-exp-024",
+      "sku": "HPC-VAR-007",
+      "name": "Doudoune Courte Puff Sans Manches Noir Mat Tactical",
+      "slug": "doudoune-courte-puff-sans-manches-noir-mat-tactical",
+      "category": "varsity",
+      "description": "Gilet matelassé court sans manches conçu pour superposer sur vos hoodies et t-shirts longs. Finition ultra-matte imperméable avec col cheminée haut et tirettes métalliques gravées HPC.",
+      "details": [
+        "Coupe raccourcie cropped tendance streetwear moderne",
+        "Col montant ouatiné protecteur contre le vent",
+        "Cordons élastiques de serrage à la taille avec stoppeurs alu",
+        "Poche intérieure zippée sécurisée pour passeport et téléphone"
+      ],
+      "materials": "Microfibre déperlante ripstop, isolation thermique sans duvet animal",
+      "careAdvice": "Lavage délicat à froid 30°C.",
+      "price": 38000,
+      "images": [
+        "https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Mat Furtif",
+          "hex": "#111111"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-024-1",
+          "size": "S",
+          "color": "Noir Mat Furtif",
+          "colorHex": "#111111",
+          "stock": 3,
+          "sku": "HPC-VAR-007-S"
+        },
+        {
+          "id": "v-exp-024-2",
+          "size": "M",
+          "color": "Noir Mat Furtif",
+          "colorHex": "#111111",
+          "stock": 5,
+          "sku": "HPC-VAR-007-M"
+        },
+        {
+          "id": "v-exp-024-3",
+          "size": "L",
+          "color": "Noir Mat Furtif",
+          "colorHex": "#111111",
+          "stock": 4,
+          "sku": "HPC-VAR-007-L"
+        },
+        {
+          "id": "v-exp-024-4",
+          "size": "XL",
+          "color": "Noir Mat Furtif",
+          "colorHex": "#111111",
+          "stock": 3,
+          "sku": "HPC-VAR-007-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 15,
+      "createdAt": "2026-03-08T10:15:00Z",
+      "updatedAt": "2026-03-08T10:15:00Z"
+    },
+    {
+      "id": "prod-exp-025",
+      "sku": "HPC-VAR-008",
+      "name": "Veste Varsity Cuir Vegan Vert Forêt & Crème Patchs Bouclés",
+      "slug": "veste-varsity-cuir-vegan-vert-foret-creme-patchs-boucles",
+      "category": "varsity",
+      "description": "Pièce maîtresse universitaire bicolore vert émeraude foncé et blanc cassé. Corps en drap de laine mélangée dense, manches en similicuir pleine fleur doux et patchs brodés chenille en relief.",
+      "details": [
+        "Patchs signature chenille bouclée brodés sur la poitrine et le dos",
+        "Boutons-pression métal laqués ton sur ton",
+        "Doublure intérieure en satin imprimé monogramme HPC",
+        "Poches gilet passepoilées en cuir contrastant"
+      ],
+      "materials": "60% laine mélangée, 40% polyuréthane éco-responsable, doublure satinée",
+      "careAdvice": "Nettoyage à sec spécialisé.",
+      "price": 49000,
+      "images": [
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Vert Forêt & Crème",
+          "hex": "#1b3b2b"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-025-1",
+          "size": "M",
+          "color": "Vert Forêt & Crème",
+          "colorHex": "#1b3b2b",
+          "stock": 3,
+          "sku": "HPC-VAR-008-M"
+        },
+        {
+          "id": "v-exp-025-2",
+          "size": "L",
+          "color": "Vert Forêt & Crème",
+          "colorHex": "#1b3b2b",
+          "stock": 4,
+          "sku": "HPC-VAR-008-L"
+        },
+        {
+          "id": "v-exp-025-3",
+          "size": "XL",
+          "color": "Vert Forêt & Crème",
+          "colorHex": "#1b3b2b",
+          "stock": 2,
+          "sku": "HPC-VAR-008-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 9,
+      "createdAt": "2026-03-08T10:30:00Z",
+      "updatedAt": "2026-03-08T10:30:00Z"
+    },
+    {
+      "id": "prod-exp-026",
+      "sku": "HPC-DNM-005",
+      "name": "Pantalon Parachute Cargo Multi-Sangles Noir Tactique",
+      "slug": "pantalon-parachute-cargo-multi-sangles-noir-tactique",
+      "category": "pantalons",
+      "description": "Pantalon baggy parachute en toile coton et nylon ultra-légère et indéchirable. Doté de 8 poches cargo asymétriques avec sangles de réglage aux genoux et chevilles élastiquées avec bloqueurs métalliques.",
+      "details": [
+        "Coupe ballon ample parachute avec plis d’aisance aux genoux",
+        "Sangles militaires tactiques amovibles à boucles rapides",
+        "Taille élastique avec cordon de serrage intérieur renforcé",
+        "Bas de jambe ajustable par tankas métalliques"
+      ],
+      "materials": "Toile ripstop 70% coton, 30% nylon haute ténacité",
+      "careAdvice": "Lavage en machine à 30°C sur l’envers.",
+      "price": 28000,
+      "images": [
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg",
+        "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Parachute",
+          "hex": "#141414"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-026-1",
+          "size": "S",
+          "color": "Noir Parachute",
+          "colorHex": "#141414",
+          "stock": 4,
+          "sku": "HPC-DNM-005-S"
+        },
+        {
+          "id": "v-exp-026-2",
+          "size": "M",
+          "color": "Noir Parachute",
+          "colorHex": "#141414",
+          "stock": 6,
+          "sku": "HPC-DNM-005-M"
+        },
+        {
+          "id": "v-exp-026-3",
+          "size": "L",
+          "color": "Noir Parachute",
+          "colorHex": "#141414",
+          "stock": 5,
+          "sku": "HPC-DNM-005-L"
+        },
+        {
+          "id": "v-exp-026-4",
+          "size": "XL",
+          "color": "Noir Parachute",
+          "colorHex": "#141414",
+          "stock": 3,
+          "sku": "HPC-DNM-005-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 18,
+      "createdAt": "2026-03-08T11:00:00Z",
+      "updatedAt": "2026-03-08T11:00:00Z"
+    },
+    {
+      "id": "prod-exp-027",
+      "sku": "HPC-DNM-006",
+      "name": "Jean Flare Skate Dépigmenté Acid Wash Bleu Ciel",
+      "slug": "jean-flare-skate-depigmente-acid-wash-bleu-ciel",
+      "category": "pantalons",
+      "description": "Jean denim 14oz à coupe évasée flare d’inspiration vintage années 2000. Lavage artisanal acid wash créant des nuances marbrées uniques. Finitions ourlet franc effiloché.",
+      "details": [
+        "Denim 100% coton lourd non extensible pour un tombé parfait sur les sneakers",
+        "Braguette à boutons gravés antique brass",
+        "Poches arrière ornées de surpiqûres géométriques discrètes",
+        "Ourlet bas découpé à cru avec franges naturelles"
+      ],
+      "materials": "Denim 100% coton peigné 14oz rigide",
+      "careAdvice": "Lavage séparé à froid. Ne pas sécher en machine.",
+      "price": 31000,
+      "images": [
+        "/assets/aistudio/1793196195794_1__83aad193.jpg",
+        "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
+      "colors": [
+        {
+          "name": "Bleu Ciel Acid Wash",
+          "hex": "#7ea4c4"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-027-1",
+          "size": "30",
+          "color": "Bleu Ciel Acid Wash",
+          "colorHex": "#7ea4c4",
+          "stock": 3,
+          "sku": "HPC-DNM-006-30"
+        },
+        {
+          "id": "v-exp-027-2",
+          "size": "32",
+          "color": "Bleu Ciel Acid Wash",
+          "colorHex": "#7ea4c4",
+          "stock": 5,
+          "sku": "HPC-DNM-006-32"
+        },
+        {
+          "id": "v-exp-027-3",
+          "size": "34",
+          "color": "Bleu Ciel Acid Wash",
+          "colorHex": "#7ea4c4",
+          "stock": 4,
+          "sku": "HPC-DNM-006-34"
+        },
+        {
+          "id": "v-exp-027-4",
+          "size": "36",
+          "color": "Bleu Ciel Acid Wash",
+          "colorHex": "#7ea4c4",
+          "stock": 2,
+          "sku": "HPC-DNM-006-36"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 14,
+      "createdAt": "2026-03-08T11:15:00Z",
+      "updatedAt": "2026-03-08T11:15:00Z"
+    },
+    {
+      "id": "prod-exp-028",
+      "sku": "HPC-DNM-007",
+      "name": "Pantalon Biker Motard Similicuir Noir Coutures Nervurées",
+      "slug": "pantalon-biker-motard-similicuir-noir-coutures-nervurees",
+      "category": "pantalons",
+      "description": "Pantalon en cuir vegan souple et extensible avec empiècements nervurés aux cuisses et genoux. Équipé de zips métalliques argentés aux chevilles pour ajuster la largeur sur les baskets montantes.",
+      "details": [
+        "Cuir synthétique PU premium au toucher nappa doux et mat",
+        "Zips argentés YKK robustes au bas des jambes",
+        "Deux poches frontales zippées et deux poches arrière classiques",
+        "Doublure respirante en viscose pour un port agréable sous le climat béninois"
+      ],
+      "materials": "Cuir vegan PU stretch, doublure 100% viscose",
+      "careAdvice": "Nettoyage en surface avec un linge humide.",
+      "price": 34000,
+      "images": [
+        "/assets/aistudio/1793196179671_1__fa78fa1f.jpg",
+        "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Nappa Mat",
+          "hex": "#121212"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-028-1",
+          "size": "S",
+          "color": "Noir Nappa Mat",
+          "colorHex": "#121212",
+          "stock": 3,
+          "sku": "HPC-DNM-007-S"
+        },
+        {
+          "id": "v-exp-028-2",
+          "size": "M",
+          "color": "Noir Nappa Mat",
+          "colorHex": "#121212",
+          "stock": 4,
+          "sku": "HPC-DNM-007-M"
+        },
+        {
+          "id": "v-exp-028-3",
+          "size": "L",
+          "color": "Noir Nappa Mat",
+          "colorHex": "#121212",
+          "stock": 4,
+          "sku": "HPC-DNM-007-L"
+        },
+        {
+          "id": "v-exp-028-4",
+          "size": "XL",
+          "color": "Noir Nappa Mat",
+          "colorHex": "#121212",
+          "stock": 2,
+          "sku": "HPC-DNM-007-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 2,
+      "totalStock": 13,
+      "createdAt": "2026-03-08T11:30:00Z",
+      "updatedAt": "2026-03-08T11:30:00Z"
+    },
+    {
+      "id": "prod-exp-029",
+      "sku": "HPC-SNK-007",
+      "name": "Sneakers Rétro Court Gum Sole Blanc Cassé & Suède Miel",
+      "slug": "sneakers-retro-court-gum-sole-blanc-casse-suede-miel",
+      "category": "sneakers",
+      "description": "Silhouette court classique des années 80 réinventée pour le vestiaire streetwear actuel. Empeigne en cuir nappa blanc cassé et empiècements en suède suédé couleur miel. Semelle cuvette en gomme caramel antidérapante.",
+      "details": [
+        "Cuir blanc patiné ultra-souple dès le premier jour",
+        "Garde-boue avant en cuir suédé beige naturel",
+        "Semelle extérieure vulcanisée en gomme naturelle haute durabilité",
+        "Lacets plats en coton écru épais fournis avec paire de rechange or"
+      ],
+      "materials": "Cuir véritable blanc cassé, daim suédé, semelle gomme vulcanisée",
+      "careAdvice": "Imperméabiliser avant premier usage. Brossage doux pour le suède.",
+      "price": 39000,
+      "images": [
+        "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "colors": [
+        {
+          "name": "Blanc Crème & Gum",
+          "hex": "#F4F1E9"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-029-1",
+          "size": "40",
+          "color": "Blanc Crème & Gum",
+          "colorHex": "#F4F1E9",
+          "stock": 3,
+          "sku": "HPC-SNK-007-40"
+        },
+        {
+          "id": "v-exp-029-2",
+          "size": "41",
+          "color": "Blanc Crème & Gum",
+          "colorHex": "#F4F1E9",
+          "stock": 5,
+          "sku": "HPC-SNK-007-41"
+        },
+        {
+          "id": "v-exp-029-3",
+          "size": "42",
+          "color": "Blanc Crème & Gum",
+          "colorHex": "#F4F1E9",
+          "stock": 6,
+          "sku": "HPC-SNK-007-42"
+        },
+        {
+          "id": "v-exp-029-4",
+          "size": "43",
+          "color": "Blanc Crème & Gum",
+          "colorHex": "#F4F1E9",
+          "stock": 4,
+          "sku": "HPC-SNK-007-43"
+        },
+        {
+          "id": "v-exp-029-5",
+          "size": "44",
+          "color": "Blanc Crème & Gum",
+          "colorHex": "#F4F1E9",
+          "stock": 2,
+          "sku": "HPC-SNK-007-44"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 20,
+      "createdAt": "2026-03-08T12:00:00Z",
+      "updatedAt": "2026-03-08T12:00:00Z"
+    },
+    {
+      "id": "prod-exp-030",
+      "sku": "HPC-SNK-008",
+      "name": "Sneakers Runner Futuriste Chunky Gris Sidéral & Mesh Argent",
+      "slug": "sneakers-runner-futuriste-chunky-gris-sideral-mesh-argent",
+      "category": "sneakers",
+      "description": "Basket trail-runner architecturale dotée d’une semelle sculptée XXL ultralégère en mousse EVA compressée. Tige multicouche en mesh technique aéré, cuir brossé gris et détails réfléchissants 3M pour vos sorties nocturnes.",
+      "details": [
+        "Semelle intercalaire profilée de 5 cm pour un amorti et une présence imposante",
+        "Inserts réfléchissants haute visibilité 3M aux lacets et talon",
+        "Empiècements en thermocollage sans couture pour éviter tout frottement",
+        "Semelle d’usure crantée adhérente tout-terrain"
+      ],
+      "materials": "Mesh balistique respirant, cuir synthétique argenté, semelle EVA",
+      "careAdvice": "Nettoyer à l’eau tiède et savon doux.",
+      "price": 43000,
+      "images": [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Gris Sidéral & 3M",
+          "hex": "#8a8f98"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-030-1",
+          "size": "41",
+          "color": "Gris Sidéral & 3M",
+          "colorHex": "#8a8f98",
+          "stock": 4,
+          "sku": "HPC-SNK-008-41"
+        },
+        {
+          "id": "v-exp-030-2",
+          "size": "42",
+          "color": "Gris Sidéral & 3M",
+          "colorHex": "#8a8f98",
+          "stock": 5,
+          "sku": "HPC-SNK-008-42"
+        },
+        {
+          "id": "v-exp-030-3",
+          "size": "43",
+          "color": "Gris Sidéral & 3M",
+          "colorHex": "#8a8f98",
+          "stock": 5,
+          "sku": "HPC-SNK-008-43"
+        },
+        {
+          "id": "v-exp-030-4",
+          "size": "44",
+          "color": "Gris Sidéral & 3M",
+          "colorHex": "#8a8f98",
+          "stock": 3,
+          "sku": "HPC-SNK-008-44"
+        },
+        {
+          "id": "v-exp-030-5",
+          "size": "45",
+          "color": "Gris Sidéral & 3M",
+          "colorHex": "#8a8f98",
+          "stock": 2,
+          "sku": "HPC-SNK-008-45"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 19,
+      "createdAt": "2026-03-08T12:15:00Z",
+      "updatedAt": "2026-03-08T12:15:00Z"
+    },
+    {
+      "id": "prod-exp-031",
+      "sku": "HPC-BSK-004",
+      "name": "Basket Pro High-Top All-Black Cuir Mat Coussin Air",
+      "slug": "basket-pro-high-top-all-black-cuir-mat-coussin-air",
+      "category": "basket",
+      "description": "Sneaker montante de basketball au look total black furtif. Col rembourré en mousse mémoire de forme pour un maintien maximal de la cheville et unité amortissante Air visible sous le talon.",
+      "details": [
+        "Tige montante avec bride scratch de maintien cheville amovible",
+        "Unité d’air comprimé sous le talon pour absorber les chocs au sol",
+        "Motif à chevrons sur la semelle extérieure en caoutchouc anti-traces",
+        "Perforations d’aération sur la toe-box pour réguler la transpiration"
+      ],
+      "materials": "Cuir pleine fleur noir mat ciré, semelle caoutchouc avec bulle Air",
+      "careAdvice": "Crème nourrissante incolore pour cuir.",
+      "price": 46000,
+      "images": [
+        "https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "colors": [
+        {
+          "name": "Triple Black Furtif",
+          "hex": "#0f0f0f"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-031-1",
+          "size": "41",
+          "color": "Triple Black Furtif",
+          "colorHex": "#0f0f0f",
+          "stock": 3,
+          "sku": "HPC-BSK-004-41"
+        },
+        {
+          "id": "v-exp-031-2",
+          "size": "42",
+          "color": "Triple Black Furtif",
+          "colorHex": "#0f0f0f",
+          "stock": 4,
+          "sku": "HPC-BSK-004-42"
+        },
+        {
+          "id": "v-exp-031-3",
+          "size": "43",
+          "color": "Triple Black Furtif",
+          "colorHex": "#0f0f0f",
+          "stock": 4,
+          "sku": "HPC-BSK-004-43"
+        },
+        {
+          "id": "v-exp-031-4",
+          "size": "44",
+          "color": "Triple Black Furtif",
+          "colorHex": "#0f0f0f",
+          "stock": 3,
+          "sku": "HPC-BSK-004-44"
+        },
+        {
+          "id": "v-exp-031-5",
+          "size": "45",
+          "color": "Triple Black Furtif",
+          "colorHex": "#0f0f0f",
+          "stock": 2,
+          "sku": "HPC-BSK-004-45"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 2,
+      "totalStock": 16,
+      "createdAt": "2026-03-08T12:30:00Z",
+      "updatedAt": "2026-03-08T12:30:00Z"
+    },
+    {
+      "id": "prod-exp-032",
+      "sku": "HPC-HD-005",
+      "name": "Hoodie Heavyweight 460 GSM Découpé Noir Charbon Relic",
+      "slug": "hoodie-heavyweight-460-gsm-decoupe-noir-charbon-relic",
+      "category": "hoodies",
+      "description": "Sweat à capuche boxy taillé dans un coton français French Terry ultra-lourd 460 grammes. Effet de délavage mineral wash artisanal et détails d’usure légère sur les bords. Capuche doublée sans cordons pour une ligne pure.",
+      "details": [
+        "Molleton lourd 460 GSM non gratté d’une tenue architecturale",
+        "Coupe oversize raccourcie aux hanches avec emmanchures basses",
+        "Poche kangourou renforcée par double surpiqûre nylon",
+        "Bords-côtes 2x2 épais indéformables aux poignets et à la taille"
+      ],
+      "materials": "100% coton peigné French Terry 460 GSM",
+      "careAdvice": "Lavage sur l’envers à 30°C. Séchage à plat.",
+      "price": 32000,
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Charbon Relic",
+          "hex": "#1c1c1c"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-032-1",
+          "size": "S",
+          "color": "Noir Charbon Relic",
+          "colorHex": "#1c1c1c",
+          "stock": 3,
+          "sku": "HPC-HD-005-S"
+        },
+        {
+          "id": "v-exp-032-2",
+          "size": "M",
+          "color": "Noir Charbon Relic",
+          "colorHex": "#1c1c1c",
+          "stock": 6,
+          "sku": "HPC-HD-005-M"
+        },
+        {
+          "id": "v-exp-032-3",
+          "size": "L",
+          "color": "Noir Charbon Relic",
+          "colorHex": "#1c1c1c",
+          "stock": 5,
+          "sku": "HPC-HD-005-L"
+        },
+        {
+          "id": "v-exp-032-4",
+          "size": "XL",
+          "color": "Noir Charbon Relic",
+          "colorHex": "#1c1c1c",
+          "stock": 3,
+          "sku": "HPC-HD-005-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 17,
+      "createdAt": "2026-03-08T13:00:00Z",
+      "updatedAt": "2026-03-08T13:00:00Z"
+    },
+    {
+      "id": "prod-exp-033",
+      "sku": "HPC-JOG-004",
+      "name": "Ensemble Survêtement Bicolore Crinkle Nylon Noir & Or Satin",
+      "slug": "ensemble-survetement-bicolore-crinkle-nylon-noir-or-satin",
+      "category": "survetements",
+      "description": "Ensemble veste zippée et bas de survêtement en nylon froissé effet parachute avec bandes latérales contrastantes or satiné. Résistant à l’eau et ultra-léger pour les soirées côtières.",
+      "details": [
+        "Veste zippée à col montant et poches biais dissimulées",
+        "Pantalon coupe droite à élastique et cordon de serrage gravé HPC",
+        "Doublure intégrale en maille respirante antitranspirante",
+        "Zips d’aisance aux chevilles pour enfiler sans retirer ses sneakers"
+      ],
+      "materials": "Nylon crinkle déperlant, doublure mesh polyester",
+      "careAdvice": "Lavage en machine cycle synthétique 30°C.",
+      "price": 42000,
+      "images": [
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir & Bandes Or",
+          "hex": "#171717"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-033-1",
+          "size": "M",
+          "color": "Noir & Bandes Or",
+          "colorHex": "#171717",
+          "stock": 4,
+          "sku": "HPC-JOG-004-M"
+        },
+        {
+          "id": "v-exp-033-2",
+          "size": "L",
+          "color": "Noir & Bandes Or",
+          "colorHex": "#171717",
+          "stock": 5,
+          "sku": "HPC-JOG-004-L"
+        },
+        {
+          "id": "v-exp-033-3",
+          "size": "XL",
+          "color": "Noir & Bandes Or",
+          "colorHex": "#171717",
+          "stock": 3,
+          "sku": "HPC-JOG-004-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": false,
+      "lowStockThreshold": 2,
+      "totalStock": 12,
+      "createdAt": "2026-03-08T13:15:00Z",
+      "updatedAt": "2026-03-08T13:15:00Z"
+    },
+    {
+      "id": "prod-exp-034",
+      "sku": "HPC-TSH-005",
+      "name": "Chemise Manches Courtes Viscose Émeraude Motifs Baroque",
+      "slug": "chemise-manches-courtes-viscose-emeraude-motifs-baroque",
+      "category": "tshirts",
+      "description": "Chemise estivale cubaine col camp à l’allure sophistiquée. Tissu soyeux en viscose végétale fluide orné d’entrelacs baroques turquoise, vert impérial et or vieilli.",
+      "details": [
+        "Col camp cubain ouvert pour un tombé décontracté et chic",
+        "Boutons nacre gravés haute finition",
+        "Ourlet bas droit avec fentes d’aisance latérales",
+        "Tissu soyeux thermo-régulant idéal pour la chaleur de Cotonou"
+      ],
+      "materials": "100% viscose de bambou fluide soyeuse",
+      "careAdvice": "Lavage délicat à la main ou machine à froid 20°C.",
+      "price": 23000,
+      "images": [
+        "/assets/aistudio/1793196179671_1__fa78fa1f.jpg",
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Émeraude & Or Baroque",
+          "hex": "#165b4c"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-034-1",
+          "size": "M",
+          "color": "Émeraude & Or Baroque",
+          "colorHex": "#165b4c",
+          "stock": 4,
+          "sku": "HPC-TSH-005-M"
+        },
+        {
+          "id": "v-exp-034-2",
+          "size": "L",
+          "color": "Émeraude & Or Baroque",
+          "colorHex": "#165b4c",
+          "stock": 5,
+          "sku": "HPC-TSH-005-L"
+        },
+        {
+          "id": "v-exp-034-3",
+          "size": "XL",
+          "color": "Émeraude & Or Baroque",
+          "colorHex": "#165b4c",
+          "stock": 4,
+          "sku": "HPC-TSH-005-XL"
+        },
+        {
+          "id": "v-exp-034-4",
+          "size": "XXL",
+          "color": "Émeraude & Or Baroque",
+          "colorHex": "#165b4c",
+          "stock": 2,
+          "sku": "HPC-TSH-005-XXL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 15,
+      "createdAt": "2026-03-08T13:30:00Z",
+      "updatedAt": "2026-03-08T13:30:00Z"
+    },
+    {
+      "id": "prod-exp-035",
+      "sku": "HPC-TSH-006",
+      "name": "T-Shirt Boxy Heavy Coton 260g Sérigraphie Street Culture",
+      "slug": "t-shirt-boxy-heavy-coton-260g-serigraphie-street-culture",
+      "category": "tshirts",
+      "description": "T-shirt streetwear lourd 260 GSM au col montant 3 cm serré qui ne gondole jamais. Impression sérigraphique au dos célébrant la culture urbaine béninoise et le mantra « Ton style. Tes règles. ».",
+      "details": [
+        "Coton peigné filé lourd 260 GSM haute densité",
+        "Col ras-du-cou côtelé épais 3 cm renforcé à double aiguille",
+        "Sérigraphie artisanale à l’encre textile gonflante haute résistance",
+        "Coupe boxy carrée avec manches descendant jusqu’au coude"
+      ],
+      "materials": "100% coton peigné biologique 260 GSM",
+      "careAdvice": "Laver sur l’envers à 30°C. Repasser sur l’envers.",
+      "price": 16000,
+      "images": [
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "sizes": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Noir Asphalte",
+          "hex": "#1c1c1c"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-035-1",
+          "size": "M",
+          "color": "Noir Asphalte",
+          "colorHex": "#1c1c1c",
+          "stock": 6,
+          "sku": "HPC-TSH-006-M"
+        },
+        {
+          "id": "v-exp-035-2",
+          "size": "L",
+          "color": "Noir Asphalte",
+          "colorHex": "#1c1c1c",
+          "stock": 8,
+          "sku": "HPC-TSH-006-L"
+        },
+        {
+          "id": "v-exp-035-3",
+          "size": "XL",
+          "color": "Noir Asphalte",
+          "colorHex": "#1c1c1c",
+          "stock": 5,
+          "sku": "HPC-TSH-006-XL"
+        }
+      ],
+      "status": "published",
+      "isFeatured": false,
+      "isNewArrival": true,
+      "lowStockThreshold": 3,
+      "totalStock": 19,
+      "createdAt": "2026-03-08T13:45:00Z",
+      "updatedAt": "2026-03-08T13:45:00Z"
+    },
+    {
+      "id": "prod-exp-036",
+      "sku": "HPC-ACC-005",
+      "name": "Sacoche Messager Bandoulière Cordura Étanche Clip Cobra",
+      "slug": "sacoche-messager-bandouliere-cordura-etanche-clip-cobra",
+      "category": "accessoires",
+      "description": "Sac messager compact en nylon Cordura 1000D balistique résistant aux coupures et à la pluie tropicale. Fermeture par boucle rapide en aluminium aéronautique façon clip cobra avec sangle de sécurité.",
+      "details": [
+        "Nylon Cordura 1000D imperméable et indéchirable",
+        "Boucle métallique tactile à libération instantanée en alliage d’aluminium",
+        "Passants MOLLE extérieurs pour accrocher vos clés ou accessoires",
+        "Compartiment matelassé pour tablette 11 pouces et smartphone"
+      ],
+      "materials": "Cordura 1000D, boucle alliage zinc-aluminium, zips étanches",
+      "careAdvice": "Nettoyage à l’éponge humide.",
+      "price": 22000,
+      "images": [
+        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=80",
+        "/assets/aistudio/1793196164363_1__528b35f1.jpg"
+      ],
+      "sizes": [
+        "Unique"
+      ],
+      "colors": [
+        {
+          "name": "Noir Balistique",
+          "hex": "#111111"
+        }
+      ],
+      "variants": [
+        {
+          "id": "v-exp-036-1",
+          "size": "Unique",
+          "color": "Noir Balistique",
+          "colorHex": "#111111",
+          "stock": 10,
+          "sku": "HPC-ACC-005-UNI"
+        }
+      ],
+      "status": "published",
+      "isFeatured": true,
+      "isNewArrival": true,
+      "lowStockThreshold": 2,
+      "totalStock": 10,
+      "createdAt": "2026-03-08T14:00:00Z",
+      "updatedAt": "2026-03-08T14:00:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-1793209656150-7516",
+      "orderNumber": "HPC-2026-7516",
+      "createdAt": "2026-10-28T17:47:36.150Z",
+      "updatedAt": "2026-10-28T17:48:09.382Z",
+      "customer": {
+        "fullName": "Marius Dossou",
+        "phone": "+229 97 12 34 56",
+        "city": "Cotonou",
+        "district": "Cadjehoun",
+        "address": "Carré 410, Rue pavée"
+      },
+      "items": [
+        {
+          "productId": "prod-001",
+          "productName": "Veste Varsity HP Heavyweight Vintage",
+          "sku": "HPC-VAR-001-M-BLK",
+          "variantId": "v-001-1",
+          "size": "M",
+          "color": "Noir & Crème",
+          "unitPrice": 58000,
+          "quantity": 1,
+          "total": 58000,
+          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80"
+        }
+      ],
+      "subtotal": 58000,
+      "discountAmount": 0,
+      "shippingFee": 1500,
+      "shippingZone": "Cotonou Intra-Muros (Express 24h)",
+      "total": 59500,
+      "paymentMethod": "cod",
+      "paymentStatus": "paid",
+      "fulfillmentStatus": "delivered",
+      "statusHistory": [
+        {
+          "status": "paid",
+          "type": "payment",
+          "timestamp": "2026-10-28T17:48:09.382Z",
+          "note": "Colis remis en main propre par coursier moto à Cadjehoun et espèces encaissées",
+          "updatedBy": "Administrateur"
+        },
+        {
+          "status": "delivered",
+          "type": "fulfillment",
+          "timestamp": "2026-10-28T17:48:09.382Z",
+          "note": "Colis remis en main propre par coursier moto à Cadjehoun et espèces encaissées",
+          "updatedBy": "Administrateur"
+        },
+        {
+          "status": "pending",
+          "type": "fulfillment",
+          "timestamp": "2026-10-28T17:47:36.150Z",
+          "note": "Commande enregistrée dans le système HP COLLECTION",
+          "updatedBy": "Client"
+        }
+      ],
+      "fedapayTransactionId": "FEDA-DEMO-MVSERDVW"
+    }
+  ],
+  "promoCodes": [
+    {
+      "id": "promo-001",
+      "code": "WELCOME10",
+      "discountType": "percentage",
+      "discountValue": 10,
+      "minOrderAmount": 25000,
+      "maxDiscount": 15000,
+      "usageLimit": 200,
+      "usedCount": 24,
+      "active": true,
+      "expiryDate": "2026-12-31T23:59:59Z"
+    },
+    {
+      "id": "promo-002",
+      "code": "COTONOU5K",
+      "discountType": "fixed",
+      "discountValue": 5000,
+      "minOrderAmount": 50000,
+      "usageLimit": 50,
+      "usedCount": 11,
+      "active": true,
+      "expiryDate": "2026-12-31T23:59:59Z"
+    }
+  ],
+  "deliveryZones": [
+    {
+      "id": "zone-cotonou",
+      "name": "Cotonou Intra-Muros (Express 24h)",
+      "cities": [
+        "Cotonou"
+      ],
+      "fee": 1500,
+      "estimatedTime": "24 heures (jour même si commandé avant 14h)",
+      "freeDeliveryThreshold": 75000,
+      "description": "Livraison directe par coursier moto à votre domicile, bureau ou boutique.",
+      "active": true
+    },
+    {
+      "id": "zone-calavi",
+      "name": "Abomey-Calavi & Akpakpa Ouest",
+      "cities": [
+        "Abomey-Calavi",
+        "Godomey",
+        "Tankpè",
+        "Akassato",
+        "Arconville"
+      ],
+      "fee": 2000,
+      "estimatedTime": "24h à 48 heures",
+      "freeDeliveryThreshold": 85000,
+      "description": "Livraison sécurisée avec remise en main propre.",
+      "active": true
+    },
+    {
+      "id": "zone-portonovo",
+      "name": "Porto-Novo & Sèmè-Kpodji",
+      "cities": [
+        "Porto-Novo",
+        "Sèmè-Kpodji",
+        "Adjarra"
+      ],
+      "fee": 2500,
+      "estimatedTime": "48 heures",
+      "freeDeliveryThreshold": 90000,
+      "description": "Acheminement rapide jusqu’à votre point de repère.",
+      "active": true
+    },
+    {
+      "id": "zone-provinces",
+      "name": "Autres Villes du Bénin (Expédition Sécurisée)",
+      "cities": [
+        "Parakou",
+        "Bohicon",
+        "Abomey",
+        "Ouidah",
+        "Natitingou",
+        "Lokossa"
+      ],
+      "fee": 4000,
+      "estimatedTime": "48h à 72 heures",
+      "freeDeliveryThreshold": 120000,
+      "description": "Expédition par compagnie partenaire avec numéro de bordereau et retrait colis.",
+      "active": true
+    },
+    {
+      "id": "zone-pickup",
+      "name": "Point Relais Partenaire Cotonou (Gratuit)",
+      "cities": [
+        "Cotonou - Haie Vive",
+        "Cotonou - Maro-Militaire"
+      ],
+      "fee": 0,
+      "estimatedTime": "Disponible sous 24h après confirmation",
+      "freeDeliveryThreshold": 0,
+      "description": "Retirez votre commande sans frais dans nos points relais partenaires.",
+      "active": true
+    }
+  ],
+  "stockMovements": [
+    {
+      "id": "mov-1793209656150-v-001-1",
+      "timestamp": "2026-10-28T17:47:36.150Z",
+      "productId": "prod-001",
+      "productName": "Veste Varsity HP Heavyweight Vintage",
+      "variantId": "v-001-1",
+      "variantSku": "HPC-VAR-001-M-BLK",
+      "change": -1,
+      "newStock": 3,
+      "type": "order",
+      "orderId": "HPC-2026-7516",
+      "reason": "Commande client #HPC-2026-7516"
+    }
+  ],
+  "storeSettings": {
+    "storeName": "HP COLLECTION",
+    "slogan": "Ton style. Tes règles.",
+    "phone": "+229 97 00 00 00",
+    "whatsappNumber": "+229 97 00 00 00",
+    "email": "contact@hpcollection.bj",
+    "address": "Cotonou, République du Bénin",
+    "announcementText": "🔥 NOUVELLE COLLECTION URBAN SNEAKERS & VARSITY DISPONIBLE | PAIEMENT À LA LIVRAISON ACCEPTÉ",
+    "announcementActive": true,
+    "currency": "XOF",
+    "currencySymbol": "FCFA",
+    "freeShippingThreshold": 75000,
+    "fedapayPublicKey": "",
+    "fedapaySecretKey": "",
+    "fedapaySandbox": true
+  },
+  "adminUsers": [
+    {
+      "id": "admin-1793209670972",
+      "email": "semakodeogratias64@gmail.com",
+      "fullName": "Deo Gratias",
+      "passwordHash": "90cb80fce36b0f251cd03a72a4558c1724f7cd6343ae386b9ecda6e2711a93782abfd9d1e420f07f7152d375fc2a77d7ae53eb04865237afb5abca092d1969ff",
+      "salt": "c8bf07abffb582d4bfcffe76990e5a22",
+      "createdAt": "2026-10-28T17:47:50.972Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "235047ad5e22f3460968fb9ffc5e88c8bb2fc49d6ed9578860f34f8062328f73",
+      "userId": "admin-1793209670972",
+      "role": "admin",
+      "expiresAt": 1793814470973
+    }
+  ]
+}

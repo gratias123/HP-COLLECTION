@@ -1,0 +1,6 @@
+{
+  "name": "HP COLLECTION",
+  "description": "Boutique en ligne premium de mode urbaine, sneakers et accessoires au Bénin. Ton style. Tes règles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
