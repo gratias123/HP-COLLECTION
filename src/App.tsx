@@ -33,6 +33,10 @@ const AppContent: React.FC = () => {
         return <InfoPages initialTab="delivery" />;
       case 'legal':
         return <InfoPages initialTab="cgv" />;
+      case 'privacy':
+        return <InfoPages initialTab="privacy" />;
+      case 'mentions':
+        return <InfoPages initialTab="mentions" />;
       case 'admin':
         return <AdminDashboard />;
       default:

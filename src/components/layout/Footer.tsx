@@ -103,8 +103,42 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Legal & Service Navigation Links */}
+        <div className="mt-8 pt-6 border-t border-[#1a1a1a] flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono">
+          <button
+            onClick={() => handleNav('delivery-info')}
+            className="hover:text-[#C7A747] transition-colors text-[#777D86]"
+          >
+            Livraison & Retours Bénin
+          </button>
+          <button
+            onClick={() => handleNav('legal')}
+            className="hover:text-[#C7A747] transition-colors text-[#777D86]"
+          >
+            Conditions Générales (CGV)
+          </button>
+          <button
+            onClick={() => handleNav('privacy')}
+            className="hover:text-[#C7A747] transition-colors text-[#777D86]"
+          >
+            Confidentialité des Données
+          </button>
+          <button
+            onClick={() => handleNav('mentions')}
+            className="hover:text-[#C7A747] transition-colors text-[#777D86]"
+          >
+            Mentions Légales & Réglementaires
+          </button>
+          <button
+            onClick={() => handleNav('contact')}
+            className="hover:text-[#C7A747] transition-colors text-[#777D86]"
+          >
+            Contact & FAQ
+          </button>
+        </div>
+
         {/* Bottom row with payment pills */}
-        <div className="mt-12 pt-7 border-t border-[#1f1f1f] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono">
+        <div className="mt-6 pt-6 border-t border-[#1f1f1f] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] font-mono">
           <p>© {new Date().getFullYear()} HP COLLECTION. Bénin.</p>
           <div className="flex flex-wrap items-center gap-2 text-[10px]">
             <span className="text-[#555]">Paiements :</span>

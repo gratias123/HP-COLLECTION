@@ -7,15 +7,18 @@ import {
   ChevronLeft,
   ChevronRight,
   Shuffle,
-  ShoppingBag,
-  Sparkles,
-  CheckCircle,
+  Camera,
+  Truck,
+  RotateCcw,
+  ShieldCheck,
+  Check,
 } from 'lucide-react';
+import { getOptimizedImageUrl } from '../utils/imageUrl';
 
 export const HomePage: React.FC = () => {
   const { products, setCurrentPage, setCategoryFilter, openProductDetail, formatCurrency } = useStore();
 
-  // Hero Slider with multiple articles & random shuffle transition mode
+  // Hero Slider with multiple articles & smooth transitions
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isRandomMode, setIsRandomMode] = useState(true);
 
@@ -32,11 +35,11 @@ export const HomePage: React.FC = () => {
     return (current + 1) % total;
   };
 
-  // Auto transition for hero slider every 5.5 seconds (random or sequential)
+  // Auto transition for hero slider every 6 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => getNextSlideIndex(prev, LOOKBOOK_OUTFITS.length, isRandomMode));
-    }, 5500);
+    }, 6000);
     return () => clearInterval(timer);
   }, [isRandomMode]);
 
@@ -80,31 +83,67 @@ export const HomePage: React.FC = () => {
 
   const filteredHomeDrops = products.filter((p) => {
     if (homeFilter === 'all') return true;
+    if (homeFilter === 'survetements') return p.category === 'survetements';
+    if (homeFilter === 'sneakers') return p.category === 'sneakers';
+    if (homeFilter === 'basket') return p.category === 'basket';
+    if (homeFilter === 'tshirts') return p.category === 'tshirts';
     if (homeFilter === 'varsity') return p.category === 'varsity';
     if (homeFilter === 'pantalons') return p.category === 'pantalons';
-    if (homeFilter === 'sneakers') return p.category === 'sneakers' || p.category === 'basket';
-    if (homeFilter === 'survetements') return p.category === 'survetements';
     if (homeFilter === 'accessoires') return p.category === 'accessoires';
     return true;
   }).slice(0, 12);
 
-  // Representative image mapping for visual category capsules
-  const categoryImages: Record<string, string> = {
-    survetements: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
-    sneakers: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
-    basket: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=800&q=80',
-    tshirts: '/assets/aistudio/1793196179671_1__fa78fa1f.jpg',
-    hoodies: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
-    varsity: '/assets/aistudio/1793196195794_1__83aad193.jpg',
-    pantalons: '/assets/aistudio/1793196164363_1__528b35f1.jpg',
-    accessoires: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80',
-  };
+  // The 6 essential product lines requested by user
+  const ESSENTIAL_LINES = [
+    {
+      id: 'survetements',
+      title: 'Joggings & Survêtements',
+      subtitle: 'Ensembles en molleton lourd 420 GSM & trackpants confort',
+      image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+      minPrice: 38000,
+    },
+    {
+      id: 'sneakers',
+      title: 'Sneakers Lifestyle',
+      subtitle: 'Silhouettes rétro, chunky sole & paires basses exclusives',
+      image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
+      minPrice: 42000,
+    },
+    {
+      id: 'basket',
+      title: 'Chaussures de Basket',
+      subtitle: 'Silhouettes montantes, maintien cheville & street court',
+      image: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=800&q=80',
+      minPrice: 48000,
+    },
+    {
+      id: 'tshirts',
+      title: 'Tee-shirts & Polos',
+      subtitle: 'Coton peigné lourd 240 GSM, coupes oversize & graphismes',
+      image: '/assets/aistudio/1793196179671_1__fa78fa1f.jpg',
+      minPrice: 18000,
+    },
+    {
+      id: 'varsity',
+      title: 'Vestes Varsity & Blousons',
+      subtitle: 'Teddy cuir vegan texturé, vestes de course & denim épais',
+      image: '/assets/aistudio/1793196195794_1__83aad193.jpg',
+      minPrice: 45000,
+    },
+    {
+      id: 'accessoires',
+      title: 'Accessoires & Sacoches',
+      subtitle: 'Sacoches box crossbody, casquettes brodées & ceintures',
+      image: '/assets/aistudio/1793196164363_1__528b35f1.jpg',
+      minPrice: 15000,
+    },
+  ];
 
   return (
-    <div className="space-y-16 sm:space-y-20 pb-20">
-      {/* 1. PRODUCT-FIRST VISUAL HERO: THE ARTICLES ARE THE MAIN ATTRACTION */}
-      <section className="relative min-h-[75vh] lg:min-h-[82vh] bg-[#0d0d0d] overflow-hidden border-b border-[#222222]">
-        {/* Full-bleed photography without heavy text masking gradients */}
+    <div className="space-y-16 sm:space-y-24 pb-20">
+      {/* 1. HERO SECTION: BOLD URBAN PHOTOGRAPHY, CLEAN SHORT HOOK & DECISIVE BUY CTA */}
+      <section className="relative min-h-[80vh] lg:min-h-[85vh] bg-[#0d0d0d] overflow-hidden border-b border-[#242424] flex items-end">
+        {/* Full-bleed high-fashion urban photography */}
         {LOOKBOOK_OUTFITS.map((look, index) => (
           <div
             key={look.id}
@@ -113,20 +152,22 @@ export const HomePage: React.FC = () => {
             }`}
           >
             <img
-              src={look.image}
+              src={getOptimizedImageUrl(look.image, { width: 1400, quality: 85 })}
               alt={look.title}
               className="w-full h-full object-cover object-top sm:object-center filter brightness-95 contrast-105"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding={index === 0 ? 'sync' : 'async'}
             />
-            {/* Subtle, soft edge vignette - preserves 90% of the photograph visibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-[#111111]/30" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#111111]/70 via-transparent to-black/40 lg:to-transparent" />
+            {/* Subtle, soft edge vignette preserving 90% of photo visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-[#141414]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#141414]/80 via-transparent to-black/30 lg:to-transparent" />
           </div>
         ))}
 
-        {/* Content Container: Clean, discrete overlay that highlights the article */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[75vh] lg:min-h-[82vh] flex flex-col justify-between py-8 lg:py-12">
-          {/* Top Info Bar: Discrete metadata & Shuffle Mode Switch */}
-          <div className="flex items-center justify-between">
+        {/* Hero Overlay Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 sm:py-16 flex flex-col justify-between min-h-[80vh] lg:min-h-[85vh]">
+          {/* Top Bar: Drop Metadata & Slide Mode */}
+          <div className="flex items-center justify-between pt-2">
             <div className="flex items-center gap-2.5 px-3 py-1 bg-[#141414]/85 backdrop-blur-md border border-[#2e2e2e]">
               <span className="w-2 h-2 rounded-full bg-[#C7A747] animate-pulse" />
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C7A747] font-semibold">
@@ -143,8 +184,8 @@ export const HomePage: React.FC = () => {
                 onClick={() => setIsRandomMode(!isRandomMode)}
                 className={`flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-mono uppercase tracking-wider backdrop-blur-md border transition-all ${
                   isRandomMode
-                    ? 'bg-[#C7A747]/20 text-[#C7A747] border-[#C7A747]/50 shadow-sm'
-                    : 'bg-[#141414]/80 text-[#777D86] border-[#2e2e2e] hover:text-[#F4F1E9]'
+                    ? 'bg-[#C7A747]/20 text-[#C7A747] border-[#C7A747]/60 shadow-sm'
+                    : 'bg-[#141414]/85 text-[#777D86] border-[#2e2e2e] hover:text-[#F4F1E9]'
                 }`}
                 title="Activer ou désactiver le défilement aléatoire"
               >
@@ -155,111 +196,58 @@ export const HomePage: React.FC = () => {
               <button
                 onClick={triggerRandomSlide}
                 className="p-1.5 bg-[#141414]/85 hover:bg-[#202020] text-[#C7A747] border border-[#2e2e2e] transition-colors"
-                title="Tirer un article au hasard"
+                title="Tirer un look au hasard"
               >
                 <Shuffle className="w-3.5 h-3.5" />
               </button>
             </div>
           </div>
 
-          {/* Center-Bottom Split: Discreet Caption (Left) & Floating Article Shop Card (Right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mt-auto pt-12">
-            {/* Left: Minimal, refined editorial label (no oversized wall of text) */}
-            <div className="lg:col-span-6 space-y-3">
-              <div className="inline-block px-2.5 py-0.5 bg-[#C7A747] text-[#141414] text-[9px] font-mono font-black uppercase tracking-widest">
-                {activeLook.tag}
-              </div>
-              <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-[#F4F1E9] tracking-tight leading-tight drop-shadow-md">
+          {/* Main Hero Hook & Purchase Action */}
+          <div className="space-y-6 max-w-2xl mt-auto pb-4">
+            <div className="inline-block px-3 py-1 bg-[#C7A747] text-[#141414] text-[10px] font-mono font-black uppercase tracking-widest">
+              {activeLook.tag}
+            </div>
+
+            <div className="space-y-2">
+              <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-black text-[#F4F1E9] tracking-tight leading-[1.05] drop-shadow-md">
                 {activeLook.title}
               </h1>
-              <p className="text-xs sm:text-sm text-[#F4F1E9]/80 max-w-md font-light leading-relaxed drop-shadow">
-                {activeLook.subtitle}
+              <p className="text-sm sm:text-base text-[#F4F1E9]/90 max-w-lg font-light leading-relaxed drop-shadow">
+                {activeLook.subtitle} — Pièces authentiques sélectionnées et livrées sous 24h à Cotonou.
               </p>
             </div>
 
-            {/* Right: FLOATING INTERACTIVE PRODUCT PILL / CARD (The article is the star!) */}
-            <div className="lg:col-span-6 lg:flex lg:justify-end">
+            {/* Decisive Purchase & Explore Buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               {activeProduct && (
-                <div
-                  onClick={() => handleOpenProduct(activeProduct.id)}
-                  className="group bg-[#151515]/95 hover:bg-[#1a1a1a] backdrop-blur-xl border border-[#C7A747]/40 hover:border-[#C7A747] p-3.5 sm:p-4 rounded-xs shadow-2xl transition-all duration-300 cursor-pointer max-w-md w-full"
+                <button
+                  onClick={() => openProductDetail(activeProduct)}
+                  className="px-6 sm:px-8 py-3.5 sm:py-4 bg-[#C7A747] hover:bg-[#b8973b] text-[#171717] font-heading font-black text-xs sm:text-sm uppercase tracking-widest transition-all inline-flex items-center gap-3 shadow-2xl group cursor-pointer"
                 >
-                  <div className="flex items-center justify-between text-[9px] font-mono text-[#777D86] uppercase tracking-wider mb-2 border-b border-[#242424] pb-2">
-                    <span className="text-[#C7A747] flex items-center gap-1 font-semibold">
-                      <ShoppingBag className="w-3 h-3" /> PIÈCE DU DROP
-                    </span>
-                    <span className="text-emerald-400 flex items-center gap-1 font-sans">
-                      <CheckCircle className="w-2.5 h-2.5" /> En stock
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-3.5">
-                    {/* Thumbnail of product */}
-                    <div className="relative w-16 h-20 sm:w-20 sm:h-24 bg-[#1e1e1e] border border-[#2d2d2d] group-hover:border-[#C7A747]/70 overflow-hidden flex-shrink-0">
-                      <img
-                        src={activeProduct.images[0]}
-                        alt={activeProduct.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-
-                    {/* Product details */}
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-xs sm:text-sm font-heading font-bold text-[#F4F1E9] group-hover:text-[#C7A747] transition-colors truncate">
-                        {activeProduct.name}
-                      </h3>
-                      <p className="text-[11px] text-[#777D86] line-clamp-1 mt-0.5">
-                        {activeProduct.description}
-                      </p>
-
-                      <div className="flex items-baseline gap-2 mt-2">
-                        <span className="font-mono text-sm sm:text-base font-extrabold text-[#C7A747]">
-                          {formatCurrency(activeProduct.price)}
-                        </span>
-                        {activeProduct.salePrice && (
-                          <span className="font-mono text-[10px] text-[#777D86] line-through">
-                            {formatCurrency(activeProduct.salePrice)}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Sizes badges */}
-                      <div className="flex flex-wrap gap-1 mt-1.5">
-                        {activeProduct.sizes.slice(0, 4).map((sz) => (
-                          <span
-                            key={sz}
-                            className="text-[8.5px] font-mono px-1.5 py-0.2 bg-[#222] border border-[#333] text-[#aaa]"
-                          >
-                            {sz}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Immediate CTA Button */}
-                  <div className="mt-3 pt-2.5 border-t border-[#242424] flex items-center justify-between">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-[#C7A747] font-semibold group-hover:underline">
-                      Voir la fiche & Commander →
-                    </span>
-                    <span className="text-[10px] font-mono text-[#777D86]">
-                      Réf: {activeProduct.sku}
-                    </span>
-                  </div>
-                </div>
+                  <span>Commander cette pièce ({formatCurrency(activeProduct.price)})</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </button>
               )}
+
+              <button
+                onClick={() => handleCategoryClick('all')}
+                className="px-6 py-3.5 sm:py-4 bg-[#141414]/90 hover:bg-[#1f1f1f] border border-[#333333] hover:border-[#C7A747] text-[#F4F1E9] font-mono text-xs uppercase tracking-wider transition-all inline-flex items-center gap-2"
+              >
+                <span>Explorer le Vestiaire</span>
+              </button>
             </div>
           </div>
 
-          {/* Bottom Visual Navigation: Visual Thumbnails of all 7 Articles */}
-          <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            {/* Miniature visual previews of the 7 outfits */}
+          {/* Bottom Thumbnails & Slide Controls */}
+          <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            {/* Visual miniatures of the looks */}
             <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
               {LOOKBOOK_OUTFITS.map((look, idx) => (
                 <button
                   key={look.id}
                   onClick={() => setCurrentSlide(idx)}
-                  className={`relative w-11 h-14 sm:w-14 sm:h-16 flex-shrink-0 border-2 overflow-hidden transition-all duration-300 ${
+                  className={`relative w-12 h-14 sm:w-14 sm:h-16 flex-shrink-0 border-2 overflow-hidden transition-all duration-300 ${
                     idx === currentSlide
                       ? 'border-[#C7A747] scale-105 shadow-lg'
                       : 'border-[#2d2d2d] opacity-50 hover:opacity-100 hover:border-[#666]'
@@ -299,7 +287,70 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 2. DIRECT PRODUCT CATALOG: PUTTING ARTICLES FRONT & CENTER */}
+      {/* 2. THE 6 ESSENTIAL PRODUCT LINES: JOGGINGS, SNEAKERS, BASKET, TEE-SHIRTS, VESTES, ACCESSOIRES */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-8 pb-4 border-b border-[#242424] flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div>
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#C7A747] font-semibold block mb-1">
+              RAYONS DU VESTIAIRE
+            </span>
+            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold text-[#F4F1E9]">
+              Les 6 Lignes Essentielles
+            </h2>
+          </div>
+          <button
+            onClick={() => handleCategoryClick('all')}
+            className="text-xs font-mono uppercase tracking-wider text-[#777D86] hover:text-[#C7A747] transition-colors flex items-center gap-1"
+          >
+            Voir toute la collection ({products.length} pièces) →
+          </button>
+        </div>
+
+        {/* 6 Elegant Category Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {ESSENTIAL_LINES.map((line) => {
+            const count = products.filter((p) => p.category === line.id).length;
+
+            return (
+              <div
+                key={line.id}
+                onClick={() => handleCategoryClick(line.id)}
+                className="group relative h-64 sm:h-72 overflow-hidden rounded-xs border border-[#262626] hover:border-[#C7A747] transition-all duration-300 text-left flex flex-col justify-end p-5 bg-[#141414] cursor-pointer"
+              >
+                {/* Background image */}
+                <img
+                  src={getOptimizedImageUrl(line.image, { width: 700, quality: 80 })}
+                  alt={line.title}
+                  className="absolute inset-0 w-full h-full object-cover object-center filter brightness-65 group-hover:scale-108 group-hover:brightness-80 transition-all duration-700 ease-out"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/40 to-transparent" />
+
+                {/* Content */}
+                <div className="relative z-10 space-y-1">
+                  <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-[#C7A747] font-semibold">
+                    <span>{count} pièces en stock</span>
+                    <span>Dès {formatCurrency(line.minPrice)}</span>
+                  </div>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-white group-hover:text-[#C7A747] transition-colors leading-tight">
+                    {line.title}
+                  </h3>
+                  <p className="text-xs text-[#9ca3af] font-light line-clamp-1">
+                    {line.subtitle}
+                  </p>
+                  <div className="pt-2 flex items-center gap-1 text-[11px] font-mono text-[#C7A747] uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span>Explorer le rayon</span>
+                    <ArrowRight className="w-3 h-3 -translate-x-1 group-hover:translate-x-0 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* 3. CURATED PRODUCT CATALOG: REGULAR, ELEGANT GRID OF ARTICLES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 pb-4 border-b border-[#242424]">
           <div>
@@ -324,24 +375,14 @@ export const HomePage: React.FC = () => {
               Tous ({products.length})
             </button>
             <button
-              onClick={() => setHomeFilter('varsity')}
+              onClick={() => setHomeFilter('survetements')}
               className={`px-3 py-1.5 transition-colors border text-[11px] ${
-                homeFilter === 'varsity'
+                homeFilter === 'survetements'
                   ? 'bg-[#C7A747] text-[#171717] border-[#C7A747] font-bold'
                   : 'bg-[#181818] hover:bg-[#222222] text-[#F4F1E9] border-[#2b2b2b]'
               }`}
             >
-              Vestes & Blousons
-            </button>
-            <button
-              onClick={() => setHomeFilter('pantalons')}
-              className={`px-3 py-1.5 transition-colors border text-[11px] ${
-                homeFilter === 'pantalons'
-                  ? 'bg-[#C7A747] text-[#171717] border-[#C7A747] font-bold'
-                  : 'bg-[#181818] hover:bg-[#222222] text-[#F4F1E9] border-[#2b2b2b]'
-              }`}
-            >
-              Denim & Cargos
+              Joggings
             </button>
             <button
               onClick={() => setHomeFilter('sneakers')}
@@ -354,14 +395,34 @@ export const HomePage: React.FC = () => {
               Sneakers
             </button>
             <button
-              onClick={() => setHomeFilter('survetements')}
+              onClick={() => setHomeFilter('basket')}
               className={`px-3 py-1.5 transition-colors border text-[11px] ${
-                homeFilter === 'survetements'
+                homeFilter === 'basket'
                   ? 'bg-[#C7A747] text-[#171717] border-[#C7A747] font-bold'
                   : 'bg-[#181818] hover:bg-[#222222] text-[#F4F1E9] border-[#2b2b2b]'
               }`}
             >
-              Survêtements
+              Basket
+            </button>
+            <button
+              onClick={() => setHomeFilter('tshirts')}
+              className={`px-3 py-1.5 transition-colors border text-[11px] ${
+                homeFilter === 'tshirts'
+                  ? 'bg-[#C7A747] text-[#171717] border-[#C7A747] font-bold'
+                  : 'bg-[#181818] hover:bg-[#222222] text-[#F4F1E9] border-[#2b2b2b]'
+              }`}
+            >
+              Tee-shirts
+            </button>
+            <button
+              onClick={() => setHomeFilter('varsity')}
+              className={`px-3 py-1.5 transition-colors border text-[11px] ${
+                homeFilter === 'varsity'
+                  ? 'bg-[#C7A747] text-[#171717] border-[#C7A747] font-bold'
+                  : 'bg-[#181818] hover:bg-[#222222] text-[#F4F1E9] border-[#2b2b2b]'
+              }`}
+            >
+              Vestes
             </button>
             <button
               onClick={() => setHomeFilter('accessoires')}
@@ -376,7 +437,7 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
 
-        {/* Big visual product grid */}
+        {/* Big regular product grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {filteredHomeDrops.map((product) => (
             <ProductCard key={product.id} product={product} />
@@ -395,63 +456,6 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. VISUAL CATEGORY CAPSULES: REAL PRODUCT IMAGES, NOT TEXT BOXES */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 pb-3 border-b border-[#242424] flex items-center justify-between">
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#C7A747] font-semibold block mb-1">
-              PARCOURS VISUEL
-            </span>
-            <h2 className="font-heading text-xl sm:text-2xl font-extrabold text-[#F4F1E9]">
-              Explorer par Rayon
-            </h2>
-          </div>
-          <button
-            onClick={() => handleCategoryClick('all')}
-            className="text-xs font-mono uppercase tracking-wider text-[#777D86] hover:text-[#C7A747] transition-colors"
-          >
-            Tout voir →
-          </button>
-        </div>
-
-        {/* Visual Tiles with Product Photography */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-          {CATEGORIES.map((cat) => {
-            const count = products.filter((p) => p.category === cat.id).length;
-            const bgImage = categoryImages[cat.id] || products.find((p) => p.category === cat.id)?.images[0];
-
-            return (
-              <button
-                key={cat.id}
-                onClick={() => handleCategoryClick(cat.id)}
-                className="group relative h-40 sm:h-48 overflow-hidden rounded-xs border border-[#262626] hover:border-[#C7A747] transition-all text-left flex flex-col justify-end p-4 bg-[#141414]"
-              >
-                {/* Background product photo */}
-                {bgImage && (
-                  <img
-                    src={bgImage}
-                    alt={cat.name}
-                    className="absolute inset-0 w-full h-full object-cover object-center filter brightness-65 group-hover:scale-110 group-hover:brightness-85 transition-all duration-700 ease-out"
-                  />
-                )}
-                {/* Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <span className="text-[9px] font-mono uppercase tracking-widest text-[#C7A747] block font-semibold">
-                    {count} {count > 1 ? 'articles' : 'article'}
-                  </span>
-                  <h3 className="font-heading text-sm sm:text-base font-bold text-white group-hover:text-[#C7A747] transition-colors leading-tight mt-0.5">
-                    {cat.name}
-                  </h3>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </section>
-
       {/* 4. REAL STREET LOOKS & SILHOUETTES GALLERY (ID: lookbook) */}
       <section id="lookbook" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 pb-3 border-b border-[#242424]">
@@ -464,7 +468,7 @@ export const HomePage: React.FC = () => {
             </h2>
           </div>
           <span className="text-[11px] font-mono text-[#777D86]">
-            Cliquez sur un look pour afficher la pièce portée
+            Cliquez sur un look pour commander la pièce portée
           </span>
         </div>
 
@@ -479,7 +483,7 @@ export const HomePage: React.FC = () => {
                 onClick={() => handleOpenProduct(outfit.productId)}
                 className="group relative bg-[#151515] border border-[#262626] hover:border-[#C7A747] transition-all duration-300 rounded-xs overflow-hidden cursor-pointer"
               >
-                {/* Photo with zoom on hover */}
+                {/* Photo with subtle zoom on hover */}
                 <div className="relative aspect-[3/4] bg-[#101010] overflow-hidden">
                   <img
                     src={outfit.image}
@@ -521,33 +525,50 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. SLIM ELEGANT PRIVILEGE RIBBON (NO GIANT TEXT BOX) */}
+      {/* 5. LOCAL SERVICE ASSURANCES: REALISTIC, BÉNIN-FOCUSED */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#181818] border border-[#C7A747]/40 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#C7A747]/10 border border-[#C7A747]/40 flex items-center justify-center flex-shrink-0">
-              <Sparkles className="w-4 h-4 text-[#C7A747]" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border border-[#262626] bg-[#151515] p-5 sm:p-6">
+          <div className="flex items-start gap-3.5">
+            <div className="w-9 h-9 bg-[#1d1d1d] border border-[#2e2e2e] flex items-center justify-center flex-shrink-0 text-[#C7A747]">
+              <Truck className="w-4 h-4" />
             </div>
             <div>
-              <p className="text-xs sm:text-sm font-bold text-[#F4F1E9]">
-                Privilège Nouveau Client : 10% offerts avec le code{' '}
-                <span className="font-mono text-[#C7A747] font-extrabold px-1.5 py-0.5 bg-[#202020] border border-[#333]">
-                  WELCOME10
-                </span>
-              </p>
-              <p className="text-[11px] text-[#777D86] mt-0.5">
-                Valable dès 25 000 FCFA d'achats sur tout le catalogue streetwear
+              <h4 className="font-heading text-sm font-bold text-[#F4F1E9]">
+                Livraison Express 24h
+              </h4>
+              <p className="text-xs text-[#777D86] mt-0.5 leading-relaxed font-light">
+                À Cotonou, Calavi et Porto-Novo par coursier moto dédié avec suivi téléphonique.
               </p>
             </div>
           </div>
 
-          <button
-            onClick={() => handleCategoryClick('all')}
-            className="px-5 py-2.5 bg-[#C7A747] hover:bg-[#b8973b] text-[#141414] font-heading font-extrabold text-[11px] uppercase tracking-wider transition-colors inline-flex items-center justify-center gap-2 flex-shrink-0"
-          >
-            <span>Profiter de l'offre</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex items-start gap-3.5">
+            <div className="w-9 h-9 bg-[#1d1d1d] border border-[#2e2e2e] flex items-center justify-center flex-shrink-0 text-[#C7A747]">
+              <ShieldCheck className="w-4 h-4" />
+            </div>
+            <div>
+              <h4 className="font-heading text-sm font-bold text-[#F4F1E9]">
+                Paiement à la Livraison
+              </h4>
+              <p className="text-xs text-[#777D86] mt-0.5 leading-relaxed font-light">
+                Réglez au déballage en espèces, Moov Money ou MTN Mobile Money sans frais cachés.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-3.5">
+            <div className="w-9 h-9 bg-[#1d1d1d] border border-[#2e2e2e] flex items-center justify-center flex-shrink-0 text-[#C7A747]">
+              <RotateCcw className="w-4 h-4" />
+            </div>
+            <div>
+              <h4 className="font-heading text-sm font-bold text-[#F4F1E9]">
+                Essayage & Échange 48h
+              </h4>
+              <p className="text-xs text-[#777D86] mt-0.5 leading-relaxed font-light">
+                Essayez directement au passage du livreur. Échange de taille gratuit sous 48h.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

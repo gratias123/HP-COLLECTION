@@ -7,6 +7,7 @@ import {
   StockMovement,
   OrderFulfillmentStatus,
   OrderPaymentStatus,
+  CategoryInfo,
 } from '../types';
 
 const API_BASE = '/api';
@@ -103,16 +104,102 @@ export const api = {
     });
   },
 
+  async updateProductStatus(
+    id: string,
+    status: 'published' | 'draft' | 'archived',
+    token: string
+  ): Promise<{ product: Product; message: string }> {
+    return request<{ product: Product; message: string }>(`/products/${id}/status`, {
+      method: 'PATCH',
+      headers: { Authorization: `Bearer ${token}` },
+      body: JSON.stringify({ status }),
+    });
+  },
+
+  async uploadImage(
+    file: File,
+    token: string
+  ): Promise<{ url: string; filename: string; message: string }> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = async () => {
+        try {
+          const base64Data = reader.result as string;
+          const res = await request<{ url: string; filename: string; message: string }>('/admin/upload', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}` },
+            body: JSON.stringify({ filename: file.name, base64Data }),
+          });
+          resolve(res);
+        } catch (err) {
+          reject(err);
+        }
+      };
+      reader.onerror = () => reject(new Error('Erreur de lecture du fichier'));
+      reader.readAsDataURL(file);
+    });
+  },
+
+  // Categories
+  async getCategories(): Promise<{ categories: CategoryInfo[] }> {
+    return request<{ categories: CategoryInfo[] }>('/categories');
+  },
+
+  async createCategory(
+    data: Partial<CategoryInfo>,
+    token: string
+  ): Promise<{ category: CategoryInfo; message: string }> {
+    return request<{ category: CategoryInfo; message: string }>('/categories', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+      body: JSON.stringify(data),
+    });
+  },
+
+  async updateCategory(
+    id: string,
+    data: Partial<CategoryInfo>,
+    token: string
+  ): Promise<{ category: CategoryInfo; message: string }> {
+    return request<{ category: CategoryInfo; message: string }>(`/categories/${id}`, {
+      method: 'PUT',
+      headers: { Authorization: `Bearer ${token}` },
+      body: JSON.stringify(data),
+    });
+  },
+
+  async deleteCategory(id: string, token: string): Promise<{ message: string; category: CategoryInfo }> {
+    return request<{ message: string; category: CategoryInfo }>(`/categories/${id}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  },
+
   // Delivery Zones
   async getDeliveryZones(): Promise<{ zones: DeliveryZone[] }> {
     return request<{ zones: DeliveryZone[] }>('/delivery-zones');
   },
 
-  async createDeliveryZone(zone: Partial<DeliveryZone>, token: string): Promise<{ zone: DeliveryZone }> {
-    return request<{ zone: DeliveryZone }>('/delivery-zones', {
+  async createDeliveryZone(zone: Partial<DeliveryZone>, token: string): Promise<{ zone: DeliveryZone; message: string }> {
+    return request<{ zone: DeliveryZone; message: string }>('/delivery-zones', {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` },
       body: JSON.stringify(zone),
+    });
+  },
+
+  async updateDeliveryZone(id: string, data: Partial<DeliveryZone>, token: string): Promise<{ zone: DeliveryZone; message: string }> {
+    return request<{ zone: DeliveryZone; message: string }>(`/delivery-zones/${id}`, {
+      method: 'PUT',
+      headers: { Authorization: `Bearer ${token}` },
+      body: JSON.stringify(data),
+    });
+  },
+
+  async deleteDeliveryZone(id: string, token: string): Promise<{ message: string; zone: DeliveryZone }> {
+    return request<{ message: string; zone: DeliveryZone }>(`/delivery-zones/${id}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${token}` },
     });
   },
 
@@ -137,9 +224,17 @@ export const api = {
     });
   },
 
-  async createCoupon(data: Partial<PromoCode>, token: string): Promise<{ coupon: PromoCode }> {
-    return request<{ coupon: PromoCode }>('/coupons', {
+  async createCoupon(data: Partial<PromoCode>, token: string): Promise<{ coupon: PromoCode; message: string }> {
+    return request<{ coupon: PromoCode; message: string }>('/coupons', {
       method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+      body: JSON.stringify(data),
+    });
+  },
+
+  async updateCoupon(id: string, data: Partial<PromoCode>, token: string): Promise<{ coupon: PromoCode; message: string }> {
+    return request<{ coupon: PromoCode; message: string }>(`/coupons/${id}`, {
+      method: 'PUT',
       headers: { Authorization: `Bearer ${token}` },
       body: JSON.stringify(data),
     });

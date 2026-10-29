@@ -14,12 +14,12 @@ import {
 } from 'lucide-react';
 
 interface InfoPagesProps {
-  initialTab?: 'contact' | 'delivery' | 'cgv' | 'privacy';
+  initialTab?: 'contact' | 'delivery' | 'cgv' | 'privacy' | 'mentions';
 }
 
 export const InfoPages: React.FC<InfoPagesProps> = ({ initialTab = 'contact' }) => {
   const { settings, deliveryZones, formatCurrency } = useStore();
-  const [tab, setTab] = useState<'contact' | 'delivery' | 'cgv' | 'privacy'>(initialTab);
+  const [tab, setTab] = useState<'contact' | 'delivery' | 'cgv' | 'privacy' | 'mentions'>(initialTab);
 
   // FAQ accordions state
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -98,6 +98,16 @@ export const InfoPages: React.FC<InfoPagesProps> = ({ initialTab = 'contact' }) 
           }`}
         >
           Confidentialité des Données
+        </button>
+        <button
+          onClick={() => setTab('mentions')}
+          className={`pb-2 border-b-2 whitespace-nowrap transition-all ${
+            tab === 'mentions'
+              ? 'border-[#C7A747] text-[#C7A747]'
+              : 'border-transparent text-[#777D86] hover:text-[#F4F1E9]'
+          }`}
+        >
+          Mentions Légales & Infos
         </button>
       </div>
 
@@ -301,6 +311,50 @@ export const InfoPages: React.FC<InfoPagesProps> = ({ initialTab = 'contact' }) 
             <h3 className="font-heading font-bold text-sm text-[#F4F1E9]">Vos Droits</h3>
             <p>
               Vous disposez d'un droit permanent de modification, de consultation et de suppression de vos données personnelles sur simple demande adressée à contact@hpcollection.bj ou par WhatsApp.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* 5. Mentions Légales & Informations Commerciales */}
+      {tab === 'mentions' && (
+        <div className="space-y-6 text-xs text-[#777D86] leading-relaxed">
+          <div>
+            <h2 className="font-heading text-2xl font-extrabold text-[#F4F1E9] mb-2">
+              Mentions Légales & Informations Commerciales
+            </h2>
+            <p className="text-[11px] text-[#C7A747]">Informations réglementaires et identification de l'éditeur</p>
+          </div>
+
+          <div className="space-y-4 bg-[#1c1c1c] p-6 border border-[#2a2a2a] rounded-xs">
+            <h3 className="font-heading font-bold text-sm text-[#F4F1E9]">Éditeur de la plateforme</h3>
+            <div className="space-y-1">
+              <p><strong>Enseigne commerciale :</strong> HP COLLECTION</p>
+              <p><strong>Activité :</strong> Vente au détail de vêtements streetwear, sneakers et accessoires de mode urbaine</p>
+              <p><strong>Siège d'exploitation :</strong> {storeAddress}, République du Bénin</p>
+              <p><strong>Service Commercial & Clientèle :</strong> {storePhone} (Appels et WhatsApp direct)</p>
+              <p><strong>Courriel officiel :</strong> contact@hpcollection.bj</p>
+              <p><strong>Directeur de la publication :</strong> Direction Commerciale HP COLLECTION</p>
+            </div>
+
+            <h3 className="font-heading font-bold text-sm text-[#F4F1E9] pt-2">Hébergement & Infrastructure</h3>
+            <p>
+              La plateforme HP COLLECTION est hébergée sur une infrastructure infonuagique sécurisée haute disponibilité, avec chiffrement SSL/TLS des flux de bout en bout et isolation étanche des données de gestion.
+            </p>
+
+            <h3 className="font-heading font-bold text-sm text-[#F4F1E9] pt-2">Propriété Intellectuelle & Droits d'Auteur</h3>
+            <p>
+              L'ensemble des éléments visuels, photographies de lookbook, logos, dénominations de collections et éléments textuels présents sur cette plateforme sont la propriété exclusive de HP COLLECTION ou font l'objet d'une licence d'exploitation autorisée. Toute reproduction totale ou partielle sans accord préalable écrit est formellement interdite.
+            </p>
+
+            <h3 className="font-heading font-bold text-sm text-[#F4F1E9] pt-2">Sécurité des Transactions Financières</h3>
+            <p>
+              Les règlements en ligne par Mobile Money (MTN, Moov, Celtiis) sont opérés via l'intermédiaire financier certifié FedaPay. HP COLLECTION n'a à aucun moment accès aux codes secrets, codes OTP ou identifiants bancaires des clients.
+            </p>
+
+            <h3 className="font-heading font-bold text-sm text-[#F4F1E9] pt-2">Droit Applicable & Juridiction</h3>
+            <p>
+              Les présentes mentions et les relations commerciales qui en découlent sont soumises au droit en vigueur en République du Bénin. En cas de contestation ou de litige non résolu à l'amiable, compétence expresse est attribuée aux tribunaux compétents de Cotonou.
             </p>
           </div>
         </div>

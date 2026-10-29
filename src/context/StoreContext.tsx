@@ -342,6 +342,37 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     showToast('Code promo retiré', 'info');
   }, [showToast]);
 
+  // Dynamically synchronize promo code discount when cart changes
+  useEffect(() => {
+    if (appliedPromo) {
+      if (cartSubtotal <= 0) {
+        setAppliedPromo(null);
+      } else {
+        api.validateCoupon(appliedPromo.code, cartSubtotal)
+          .then((res) => {
+            if (res.valid) {
+              setAppliedPromo((prev) => {
+                if (!prev) return null;
+                return {
+                  code: res.code,
+                  discountAmount: res.discountAmount,
+                  discountType: res.discountType,
+                  discountValue: res.discountValue,
+                };
+              });
+            } else {
+              setAppliedPromo(null);
+              showToast('Le panier ne remplit plus les conditions du code promo.', 'info');
+            }
+          })
+          .catch(() => {
+            setAppliedPromo(null);
+            showToast('Code promo retiré car le montant minimum requis n’est plus atteint.', 'info');
+          });
+      }
+    }
+  }, [cartSubtotal]);
+
   // Wishlist
   const toggleWishlist = useCallback(
     (productId: string) => {

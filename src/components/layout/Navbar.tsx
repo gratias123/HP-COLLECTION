@@ -109,10 +109,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
 
   return (
     <header className="sticky top-0 z-40 bg-[#141414]/95 backdrop-blur-xl border-b border-[#242424] transition-all">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-3 sm:gap-4">
-          {/* 1. Mobile Menu Trigger (Mobile only) */}
-          <div className="flex items-center lg:hidden flex-shrink-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 gap-4">
+          {/* 1. Mobile Menu & Search Triggers (Mobile & Tablet < lg) */}
+          <div className="flex items-center lg:hidden gap-1 flex-shrink-0">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 -ml-2 text-[#F4F1E9] hover:text-[#C7A747] transition-colors focus:outline-none"
@@ -129,15 +129,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
             </button>
           </div>
 
-          {/* 2. Brand Wordmark & Monogram Logo (Always single-line, never wraps or collides) */}
-          <div className="flex items-center flex-shrink-0">
+          {/* 2. Brand Wordmark & Monogram Logo (Protected width, clean typography, no collision) */}
+          <div className="flex items-center flex-shrink-0 mr-4">
             <button
               onClick={() => handleNav('home')}
-              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none text-left flex-shrink-0"
+              className="flex items-center gap-3 group focus:outline-none text-left flex-shrink-0"
             >
               {/* Monogram crest */}
-              <div className="w-8 h-8 sm:w-9 sm:h-9 border border-[#C7A747]/60 bg-[#1c1c1c] group-hover:border-[#C7A747] flex items-center justify-center transition-all flex-shrink-0 relative shadow-sm">
-                <span className="font-heading font-black text-xs sm:text-sm text-[#F4F1E9] tracking-tighter">
+              <div className="w-9 h-9 border border-[#C7A747]/60 bg-[#1c1c1c] group-hover:border-[#C7A747] flex items-center justify-center transition-all flex-shrink-0 relative">
+                <span className="font-heading font-black text-sm text-[#F4F1E9] tracking-tighter">
                   HP<span className="text-[#C7A747]">.</span>
                 </span>
                 <span className="absolute -bottom-0.5 -right-0.5 w-1 h-1 bg-[#C7A747]" />
@@ -145,20 +145,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
 
               {/* Brand typography */}
               <div className="flex flex-col flex-shrink-0">
-                <span className="font-heading text-base sm:text-xl font-black text-[#F4F1E9] tracking-[0.14em] whitespace-nowrap group-hover:text-white transition-colors">
+                <span className="font-heading text-lg sm:text-xl font-black text-[#F4F1E9] tracking-[0.14em] whitespace-nowrap group-hover:text-white transition-colors leading-none">
                   HP COLLECTION
                 </span>
-                <div className="flex items-center gap-1.5 text-[8px] uppercase tracking-[0.2em] text-[#777D86] group-hover:text-[#C7A747] transition-colors font-mono whitespace-nowrap">
-                  <span>Bénin</span>
-                  <span className="text-[#C7A747]">•</span>
-                  <span>Haute Culture Urbaine</span>
-                </div>
+                <span className="text-[9px] uppercase tracking-[0.22em] text-[#777D86] group-hover:text-[#C7A747] transition-colors font-mono whitespace-nowrap mt-1 leading-none">
+                  BÉNIN • CULTURE URBAINE
+                </span>
               </div>
             </button>
           </div>
 
-          {/* 3. Desktop Navigation Menu (Spacious, centered, strict single-line without text wrapping) */}
-          <nav className="hidden lg:flex items-center justify-center space-x-4 xl:space-x-7 text-[11px] font-mono tracking-[0.16em] uppercase font-semibold whitespace-nowrap flex-shrink-0">
+          {/* 3. Desktop Navigation Menu (Strict single-line items, generous spacing, luxury feel) */}
+          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-7 text-[11px] font-mono tracking-[0.15em] uppercase font-semibold whitespace-nowrap flex-1">
             {/* Accueil */}
             <button
               onClick={() => handleNav('home')}
@@ -174,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
               )}
             </button>
 
-            {/* Rayons Mega Dropdown */}
+            {/* Rayons Dropdown */}
             <div
               className="relative flex-shrink-0"
               onMouseEnter={() => setCategoriesDropdownOpen(true)}
@@ -182,7 +180,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
             >
               <button
                 onClick={() => handleNav('catalog', 'all')}
-                className={`flex items-center gap-1 py-2 transition-colors whitespace-nowrap flex-shrink-0 ${
+                className={`flex items-center gap-1.5 py-2 transition-colors whitespace-nowrap flex-shrink-0 ${
                   currentPage === 'catalog'
                     ? 'text-[#C7A747]'
                     : 'text-[#F4F1E9]/80 hover:text-[#F4F1E9]'
@@ -190,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
               >
                 <span>Rayons</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 text-[#777D86] ${
+                  className={`w-3 h-3 transition-transform duration-200 text-[#777D86] ${
                     categoriesDropdownOpen ? 'rotate-180 text-[#C7A747]' : ''
                   }`}
                 />
@@ -200,17 +198,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
               </button>
 
               {categoriesDropdownOpen && (
-                <div className="absolute top-full -left-16 w-[490px] bg-[#161616]/98 backdrop-blur-2xl border border-[#2d2d2d] shadow-2xl p-5 rounded-xs animate-in fade-in slide-in-from-top-1 duration-150 z-50">
+                <div className="absolute top-full -left-12 w-[520px] bg-[#161616]/98 backdrop-blur-2xl border border-[#2d2d2d] shadow-2xl p-5 rounded-xs animate-in fade-in slide-in-from-top-1 duration-150 z-50">
                   <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#242424]">
                     <span className="text-[10px] font-mono tracking-[0.25em] text-[#C7A747] uppercase font-bold flex items-center gap-1.5">
                       <Flame className="w-3.5 h-3.5" />
-                      Capsules & Rayons HP ({products.length} articles)
+                      Rayons du Vestiaire ({products.length} pièces)
                     </span>
                     <button
                       onClick={() => handleNav('catalog', 'all')}
                       className="text-[10px] text-[#777D86] hover:text-[#C7A747] transition-colors flex items-center gap-1 font-mono tracking-wider"
                     >
-                      Tout voir
+                      Tout afficher
                       <ArrowRight className="w-3 h-3" />
                     </button>
                   </div>
@@ -237,22 +235,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
 
                   <div className="mt-3 pt-3 border-t border-[#242424] flex items-center justify-between text-[10px] font-mono text-[#888]">
                     <span className="flex items-center gap-1.5 text-[#C7A747]">
-                      <Sparkles className="w-3 h-3" /> Nouvelle Collection 2026
+                      <Sparkles className="w-3 h-3" /> Pièces réelles disponibles à Cotonou
                     </span>
-                    <span className="text-[#666]">Livraison rapide à Cotonou & Bénin</span>
+                    <span className="text-[#666]">Paiement à la livraison</span>
                   </div>
                 </div>
               )}
             </div>
 
-            {/* Direct Category Shortcuts (Always on a single line) */}
-            <button
-              onClick={() => handleNav('catalog', 'varsity')}
-              className="py-2 text-[#F4F1E9]/80 hover:text-[#C7A747] transition-colors whitespace-nowrap flex-shrink-0"
-            >
-              Vestes & Denim
-            </button>
-
+            {/* Direct Streetwear Lines Shortcuts (Zero line-breaking) */}
             <button
               onClick={() => handleNav('catalog', 'sneakers')}
               className="py-2 text-[#F4F1E9]/80 hover:text-[#C7A747] transition-colors whitespace-nowrap flex-shrink-0"
@@ -260,16 +251,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
               Sneakers
             </button>
 
-            {/* Direct Lookbook jump */}
+            <button
+              onClick={() => handleNav('catalog', 'survetements')}
+              className="py-2 text-[#F4F1E9]/80 hover:text-[#C7A747] transition-colors whitespace-nowrap flex-shrink-0"
+            >
+              Joggings
+            </button>
+
+            <button
+              onClick={() => handleNav('catalog', 'varsity')}
+              className="py-2 text-[#F4F1E9]/80 hover:text-[#C7A747] transition-colors whitespace-nowrap flex-shrink-0"
+            >
+              Vestes
+            </button>
+
             <button
               onClick={handleLookbookScroll}
-              className="py-2 text-[#F4F1E9]/80 hover:text-[#C7A747] transition-colors flex items-center gap-1.5 whitespace-nowrap flex-shrink-0"
+              className="py-2 text-[#F4F1E9]/80 hover:text-[#C7A747] transition-colors flex items-center gap-1 whitespace-nowrap flex-shrink-0"
             >
               <Camera className="w-3 h-3 text-[#C7A747]" />
               <span>Lookbook</span>
             </button>
 
-            {/* Suivi Colis */}
             <button
               onClick={() => handleNav('order-tracking')}
               className={`py-2 transition-colors whitespace-nowrap flex-shrink-0 ${
@@ -282,8 +285,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
             </button>
           </nav>
 
-          {/* 4. Right Action Suite (Compact, clean, responsive, never overflowed) */}
-          <div className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          {/* 4. Right Action Suite (Clean, aligned, perfectly proportioned) */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             {/* Search Trigger Button */}
             <button
               onClick={() => setSearchOverlayOpen(true)}
@@ -293,7 +296,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
             >
               <Search className="w-3.5 h-3.5 text-[#C7A747]" />
               <span className="hidden xl:inline text-[11px] font-mono tracking-wider">
-                Rechercher...
+                Rechercher
               </span>
             </button>
 
@@ -312,10 +315,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
               )}
             </button>
 
-            {/* Shopping Cart Pill */}
+            {/* Shopping Cart Button */}
             <button
               onClick={openCart}
-              className="relative flex items-center gap-2 px-2.5 sm:px-3 py-1.5 bg-[#1c1c1c] hover:bg-[#242424] border border-[#2c2c2c] hover:border-[#C7A747]/60 rounded-xs text-[#F4F1E9] transition-all group flex-shrink-0"
+              className="relative flex items-center gap-2 px-3 py-1.5 bg-[#1c1c1c] hover:bg-[#242424] border border-[#2c2c2c] hover:border-[#C7A747]/70 rounded-xs text-[#F4F1E9] transition-all group flex-shrink-0"
               aria-label="Panier"
             >
               <div className="relative">
@@ -330,7 +333,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
                 <span className="text-[7.5px] font-mono uppercase tracking-wider text-[#777D86] leading-none">
                   Panier
                 </span>
-                <span className="text-[10.5px] font-mono font-bold tracking-tight text-[#F4F1E9]">
+                <span className="text-[11px] font-mono font-bold tracking-tight text-[#F4F1E9]">
                   {cartCount > 0 ? formatCurrency(cartSubtotal) : '0 FCFA'}
                 </span>
               </div>
@@ -339,7 +342,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
             {/* Admin Entry Pill */}
             <button
               onClick={() => handleNav('admin')}
-              className={`flex items-center gap-1 text-[9.5px] font-mono tracking-wider uppercase px-2 py-1.5 border transition-all rounded-xs flex-shrink-0 whitespace-nowrap ${
+              className={`flex items-center gap-1.5 text-[10px] font-mono tracking-wider uppercase px-2.5 py-1.5 border transition-all rounded-xs flex-shrink-0 whitespace-nowrap ${
                 isAdminAuthenticated
                   ? 'border-[#C7A747] text-[#C7A747] bg-[#C7A747]/10'
                   : 'border-[#2c2c2c] text-[#777D86] hover:text-[#F4F1E9] hover:border-[#444] hover:bg-[#202020]'
@@ -347,7 +350,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSearchClick }) => {
               title="Accès Administrateur HP Collection"
             >
               <Shield className="w-3 h-3 text-[#C7A747]" />
-              <span className="hidden xl:inline">Accès</span> Admin
+              <span className="hidden xl:inline">Admin</span>
             </button>
           </div>
         </div>

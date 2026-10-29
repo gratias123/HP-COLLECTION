@@ -13,6 +13,7 @@ import {
   ChevronRight,
   Info,
 } from 'lucide-react';
+import { getOptimizedImageUrl } from '../../utils/imageUrl';
 
 export const ProductDetailModal: React.FC = () => {
   const {
@@ -98,9 +99,10 @@ export const ProductDetailModal: React.FC = () => {
           <div className="p-4 sm:p-6 bg-[#141414] flex flex-col gap-4">
             <div className="relative aspect-square w-full bg-[#1c1c1c] rounded-xs overflow-hidden border border-[#2a2a2a]">
               <img
-                src={product.images[activeImageIndex] || product.images[0]}
+                src={getOptimizedImageUrl(product.images[activeImageIndex] || product.images[0], { width: 900, quality: 85 })}
                 alt={product.name}
                 className="w-full h-full object-cover object-center"
+                decoding="async"
               />
               {isOnSale && (
                 <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#C7A747] text-[#171717] font-black text-xs uppercase tracking-wider rounded-xs shadow-md">
@@ -122,7 +124,13 @@ export const ProductDetailModal: React.FC = () => {
                         : 'border-[#2e2e2e] opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img
+                      src={getOptimizedImageUrl(img, { width: 150, quality: 75 })}
+                      alt=""
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </button>
                 ))}
               </div>
