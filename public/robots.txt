@@ -1,0 +1,8 @@
+# robots.txt pour HP COLLECTION — Mode Urbaine & Sneakers au Bénin
+User-agent: *
+Allow: /
+Disallow: /api/admin/
+Disallow: /order-confirmation
+
+# Sitemap index
+Sitemap: https://hpcollection.bj/sitemap.xml

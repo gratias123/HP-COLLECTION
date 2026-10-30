@@ -37,7 +37,7 @@
           "size": "M",
           "color": "Noir Washed",
           "colorHex": "#222222",
-          "stock": 7,
+          "stock": 6,
           "sku": "HPC-TSH-008-M"
         },
         {
@@ -69,9 +69,9 @@
       "isFeatured": true,
       "isNewArrival": true,
       "lowStockThreshold": 3,
-      "totalStock": 25,
+      "totalStock": 24,
       "createdAt": "2026-03-21T10:30:00Z",
-      "updatedAt": "2026-10-29T19:50:08.417Z"
+      "updatedAt": "2026-10-30T12:09:44.056Z"
     },
     {
       "id": "prod-srv-008",
@@ -4095,6 +4095,58 @@
   ],
   "orders": [
     {
+      "id": "order-1793362184056-8687",
+      "orderNumber": "HPC-2026-8687",
+      "createdAt": "2026-10-30T12:09:44.056Z",
+      "updatedAt": "2026-10-30T12:09:44.056Z",
+      "customer": {
+        "fullName": "Testeur Sécurité HP",
+        "phone": "+229 97 11 22 33",
+        "city": "Cotonou",
+        "district": "Cadjehoun",
+        "address": "Rue du test"
+      },
+      "items": [
+        {
+          "productId": "prod-tsh-008",
+          "productName": "T-shirt Oversize 240 GSM Cotonou Heritage Noir",
+          "sku": "HPC-TSH-008-M",
+          "variantId": "v-tsh-008-M",
+          "size": "M",
+          "color": "Noir Washed",
+          "unitPrice": 18000,
+          "quantity": 1,
+          "total": 18000,
+          "image": "/assets/aistudio/1793196179671_1__fa78fa1f.jpg"
+        }
+      ],
+      "subtotal": 18000,
+      "discountAmount": 0,
+      "shippingFee": 1500,
+      "shippingZone": "Cotonou Intra-Muros (Express 24h)",
+      "total": 19500,
+      "paymentMethod": "cod",
+      "paymentStatus": "paid",
+      "fulfillmentStatus": "pending",
+      "idempotencyKey": "idem-test-sec-01",
+      "statusHistory": [
+        {
+          "status": "paid",
+          "type": "payment",
+          "timestamp": "2026-10-30T12:09:44.150Z",
+          "note": "Paiement Mobile Money validé avec succès (Simulation FedaPay)",
+          "updatedBy": "FedaPay Sandbox Webhook"
+        },
+        {
+          "status": "pending",
+          "type": "fulfillment",
+          "timestamp": "2026-10-30T12:09:44.056Z",
+          "note": "Commande enregistrée dans le système HP COLLECTION",
+          "updatedBy": "Client"
+        }
+      ]
+    },
+    {
       "id": "order-1793209656150-7516",
       "orderNumber": "HPC-2026-7516",
       "createdAt": "2026-10-28T17:47:36.150Z",
@@ -4305,6 +4357,19 @@
   ],
   "stockMovements": [
     {
+      "id": "mov-1793362184056-v-tsh-008-M",
+      "timestamp": "2026-10-30T12:09:44.056Z",
+      "productId": "prod-tsh-008",
+      "productName": "T-shirt Oversize 240 GSM Cotonou Heritage Noir",
+      "variantId": "v-tsh-008-M",
+      "variantSku": "HPC-TSH-008-M",
+      "change": -1,
+      "newStock": 6,
+      "type": "order",
+      "orderId": "HPC-2026-8687",
+      "reason": "Commande client #HPC-2026-8687"
+    },
+    {
       "id": "mov-1793209656150-v-001-1",
       "timestamp": "2026-10-28T17:47:36.150Z",
       "productId": "prod-001",
@@ -4382,6 +4447,12 @@
       "userId": "admin-default-root",
       "role": "admin",
       "expiresAt": 1793908217065
+    },
+    {
+      "token": "2e818b51f3a13fd0eaa5383438740c5e96aab9dff9482b8be9e09cd42cc124d5",
+      "userId": "admin-default-root",
+      "role": "admin",
+      "expiresAt": 1793966983812
     }
   ]
 }

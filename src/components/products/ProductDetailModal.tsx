@@ -100,9 +100,11 @@ export const ProductDetailModal: React.FC = () => {
             <div className="relative aspect-square w-full bg-[#1c1c1c] rounded-xs overflow-hidden border border-[#2a2a2a]">
               <img
                 src={getOptimizedImageUrl(product.images[activeImageIndex] || product.images[0], { width: 900, quality: 85 })}
-                alt={product.name}
+                alt={`${product.name} (${product.category}) - HP COLLECTION Cotonou Bénin`}
                 className="w-full h-full object-cover object-center"
                 decoding="async"
+                width="600"
+                height="600"
               />
               {isOnSale && (
                 <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#C7A747] text-[#171717] font-black text-xs uppercase tracking-wider rounded-xs shadow-md">
@@ -111,9 +113,9 @@ export const ProductDetailModal: React.FC = () => {
               )}
             </div>
 
-            {/* Gallery Thumbnails */}
+            {/* Gallery Thumbnails (All visible, no horizontal scroll) */}
             {product.images.length > 1 && (
-              <div className="flex gap-2 overflow-x-auto pb-1">
+              <div className="flex flex-wrap gap-2 pb-1">
                 {product.images.map((img, idx) => (
                   <button
                     key={idx}
@@ -126,10 +128,12 @@ export const ProductDetailModal: React.FC = () => {
                   >
                     <img
                       src={getOptimizedImageUrl(img, { width: 150, quality: 75 })}
-                      alt=""
+                      alt={`${product.name} vue miniature ${idx + 1}`}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
+                      width="64"
+                      height="64"
                     />
                   </button>
                 ))}

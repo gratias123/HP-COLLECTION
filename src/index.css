@@ -13,19 +13,20 @@
   --color-brand-surface-light: #262626;
 }
 
-body {
-  font-family: var(--font-sans);
-  background-color: #171717;
-  color: #F4F1E9;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
-/* Custom sleek scrollbar */
+/* Custom sleek vertical scrollbar only (Zero horizontal scrollbar) */
 ::-webkit-scrollbar {
   width: 6px;
-  height: 6px;
+  height: 0px;
+}
+::-webkit-scrollbar:horizontal {
+  display: none !important;
+  height: 0px !important;
+  width: 0px !important;
 }
 ::-webkit-scrollbar-track {
   background: #141414;

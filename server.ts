@@ -4,6 +4,7 @@ import fs from 'fs';
 import crypto from 'crypto';
 import dotenv from 'dotenv';
 import { createServer as createViteServer } from 'vite';
+import { GoogleGenAI } from '@google/genai';
 import {
   Product,
   Order,
@@ -26,6 +27,15 @@ import {
 
 dotenv.config();
 
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY || '',
+  httpOptions: {
+    headers: {
+      'User-Agent': 'aistudio-build',
+    },
+  },
+});
+
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const DATA_DIR = path.resolve(process.cwd(), 'data');
@@ -45,12 +55,21 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
-// 2. Serve uploaded files statically with aggressive caching and security settings
+// 2. Serve uploaded files and public assets statically with caching and security
 app.use(
   '/uploads',
   express.static(UPLOAD_DIR, {
     maxAge: '30d',
     immutable: true,
+    dotfiles: 'ignore',
+    etag: true,
+  })
+);
+
+const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
+app.use(
+  express.static(PUBLIC_DIR, {
+    maxAge: '7d',
     dotfiles: 'ignore',
     etag: true,
   })
@@ -212,6 +231,74 @@ function requireAdmin(req: Request, res: Response, next: NextFunction) {
   (req as any).adminUserId = session.userId;
   next();
 }
+
+// ==========================================
+// SEO ENDPOINTS (DYNAMIC SITEMAP & ROBOTS)
+// ==========================================
+app.get('/robots.txt', (req: Request, res: Response) => {
+  const baseUrl = process.env.APP_URL || `${req.protocol}://${req.get('host')}`;
+  res.type('text/plain');
+  res.send(`# robots.txt pour HP COLLECTION — Mode Urbaine & Sneakers au Bénin
+User-agent: *
+Allow: /
+Disallow: /api/admin/
+Disallow: /order-confirmation
+
+Sitemap: ${baseUrl}/sitemap.xml
+`);
+});
+
+app.get('/sitemap.xml', (req: Request, res: Response) => {
+  const db = getDatabase();
+  const baseUrl = process.env.APP_URL || `${req.protocol}://${req.get('host')}`;
+  const now = new Date().toISOString().split('T')[0];
+
+  const staticUrls = [
+    { loc: `${baseUrl}/`, priority: '1.0', changefreq: 'daily' },
+    { loc: `${baseUrl}/catalog`, priority: '0.9', changefreq: 'daily' },
+    { loc: `${baseUrl}/delivery-info`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/contact`, priority: '0.7', changefreq: 'monthly' },
+    { loc: `${baseUrl}/order-tracking`, priority: '0.6', changefreq: 'weekly' },
+    { loc: `${baseUrl}/legal`, priority: '0.5', changefreq: 'yearly' },
+    { loc: `${baseUrl}/privacy`, priority: '0.5', changefreq: 'yearly' },
+    { loc: `${baseUrl}/mentions`, priority: '0.5', changefreq: 'yearly' },
+  ];
+
+  const categoryUrls = (db.categories || CATEGORIES).map((c) => ({
+    loc: `${baseUrl}/catalog?category=${encodeURIComponent(c.id)}`,
+    priority: '0.85',
+    changefreq: 'daily',
+    lastmod: now,
+  }));
+
+  const productUrls = (db.products || INITIAL_PRODUCTS)
+    .filter((p) => p.status === 'published')
+    .map((p) => ({
+      loc: `${baseUrl}/catalog?product=${encodeURIComponent(p.id)}`,
+      priority: p.isFeatured ? '0.8' : '0.7',
+      changefreq: 'weekly',
+      lastmod: p.updatedAt ? p.updatedAt.split('T')[0] : now,
+    }));
+
+  const allEntries = [...staticUrls, ...categoryUrls, ...productUrls];
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allEntries
+  .map(
+    (item) => `  <url>
+    <loc>${item.loc}</loc>
+    <lastmod>${(item as any).lastmod || now}</lastmod>
+    <changefreq>${item.changefreq}</changefreq>
+    <priority>${item.priority}</priority>
+  </url>`
+  )
+  .join('\n')}
+</urlset>`;
+
+  res.header('Content-Type', 'application/xml; charset=utf-8');
+  res.send(xml);
+});
 
 // ==========================================
 // API ROUTES
@@ -802,9 +889,9 @@ app.delete('/api/coupons/:id', requireAdmin, (req: Request, res: Response) => {
   res.json({ message: 'Code promo supprimé' });
 });
 
-// 4. ORDERS & CHECKOUT (CRITICAL ATOMIC SERVER RE-VERIFICATION)
+// 4. ORDERS & CHECKOUT (CRITICAL ATOMIC SERVER RE-VERIFICATION & ANTI-DUPLICATE)
 app.post('/api/orders', (req: Request, res: Response) => {
-  const { customer, items, promoCode, deliveryZoneId, paymentMethod } = req.body;
+  const { customer, items, promoCode, deliveryZoneId, paymentMethod, idempotencyKey } = req.body;
 
   if (!customer || !customer.fullName || !customer.phone || !customer.city || !customer.district) {
     return res.status(400).json({ error: 'Nom, téléphone, ville et quartier de livraison sont obligatoires' });
@@ -815,6 +902,43 @@ app.post('/api/orders', (req: Request, res: Response) => {
   }
 
   const db = getDatabase();
+
+  // A. Idempotency Check (if client supplied idempotencyKey or header)
+  const rawIdemKey = idempotencyKey || req.headers['idempotency-key'];
+  const idemKey = typeof rawIdemKey === 'string' ? rawIdemKey.trim() : undefined;
+
+  if (idemKey) {
+    const existingOrder = db.orders.find((o) => o.idempotencyKey === idemKey);
+    if (existingOrder) {
+      return res.status(200).json({
+        order: existingOrder,
+        message: 'Commande déjà enregistrée (protection idempotence).',
+        duplicateDetected: true,
+      });
+    }
+  }
+
+  // B. Anti-Duplicate Submission Check (Same phone number & same items within 45 seconds)
+  const cleanPhoneDigits = customer.phone.replace(/[^0-9]/g, '');
+  const nowMs = Date.now();
+  const recentDuplicate = db.orders.find((o) => {
+    const orderTime = new Date(o.createdAt).getTime();
+    if (nowMs - orderTime > 45000) return false;
+    const oPhone = o.customer.phone.replace(/[^0-9]/g, '');
+    if (oPhone !== cleanPhoneDigits) return false;
+    if (o.items.length !== items.length) return false;
+    return items.every((it: any) =>
+      o.items.some((oi) => oi.variantId === it.variantId && oi.quantity === (parseInt(it.quantity, 10) || 1))
+    );
+  });
+
+  if (recentDuplicate) {
+    return res.status(200).json({
+      order: recentDuplicate,
+      message: 'Votre commande a déjà été prise en compte avec succès.',
+      duplicateDetected: true,
+    });
+  }
 
   // 1. Verify and lock items & calculate server-side subtotal
   let verifiedSubtotal = 0;
@@ -958,6 +1082,7 @@ app.post('/api/orders', (req: Request, res: Response) => {
     paymentMethod: chosenPaymentMethod,
     paymentStatus: 'pending',
     fulfillmentStatus: 'pending',
+    idempotencyKey: idemKey,
     statusHistory: [
       {
         status: 'pending',
@@ -1159,6 +1284,11 @@ app.post('/api/payments/fedapay/create-transaction', async (req: Request, res: R
     return res.status(404).json({ error: 'Commande introuvable' });
   }
 
+  // Prevent duplicate transaction if already paid
+  if (order.paymentStatus === 'paid') {
+    return res.status(400).json({ error: 'Cette commande a déjà été payée avec succès.' });
+  }
+
   const secretKey = process.env.FEDAPAY_SECRET_KEY || db.storeSettings.fedapaySecretKey;
   const isSandbox = db.storeSettings.fedapaySandbox;
 
@@ -1245,6 +1375,16 @@ app.post('/api/payments/fedapay/confirm-demo', (req: Request, res: Response) => 
     return res.status(404).json({ error: 'Commande introuvable' });
   }
 
+  // Prevent duplicate confirmation if already marked as paid
+  if (order.paymentStatus === 'paid' && success) {
+    return res.json({
+      order,
+      success: true,
+      message: 'Cette transaction a déjà été confirmée et validée.',
+      alreadyProcessed: true,
+    });
+  }
+
   const now = new Date().toISOString();
   if (success) {
     order.paymentStatus = 'paid';
@@ -1270,7 +1410,117 @@ app.post('/api/payments/fedapay/confirm-demo', (req: Request, res: Response) => 
   res.json({ order, success });
 });
 
-// 6. ADMIN AUTHENTICATION & BOOTSTRAP
+// 6. AI CUSTOMER CHATBOT (GEMINI API - DELIVERY, SIZES, AVAILABILITY)
+app.post('/api/chat', async (req: Request, res: Response) => {
+  try {
+    const { message, history } = req.body;
+    if (!message || typeof message !== 'string' || !message.trim()) {
+      return res.status(400).json({ error: 'Message requis' });
+    }
+
+    const db = getDatabase();
+    const categoriesList = (db.categories || CATEGORIES).map((c) => c.name).join(', ');
+    const activeProducts = (db.products || INITIAL_PRODUCTS).filter((p) => p.status === 'published');
+    const activeProductsCount = activeProducts.length;
+    const sampleProducts = activeProducts
+      .filter((p) => p.totalStock > 0)
+      .slice(0, 10)
+      .map((p) => `${p.name} (${p.category}, ${(p.salePrice || p.price).toLocaleString('fr-FR')} FCFA)`)
+      .join(' ; ');
+
+    const systemInstruction = `Tu es l'assistant virtuel officiel et conseiller style de HP COLLECTION, boutique de mode urbaine haut de gamme basée à Cotonou, Bénin.
+Devise de la marque : "Ton style. Tes règles."
+
+Informations officielles et exactes de la boutique :
+1. LIVRAISON AU BÉNIN :
+   • Cotonou & Abomey-Calavi : livraison sous 24h ouvrées (souvent le jour même si commande passée avant 14h) par coursier moto dédié. Frais : 1 500 FCFA. Livraison 100% offerte dès 50 000 FCFA d'achats.
+   • Porto-Novo & Sèmè-Kpodji : livraison sous 48h (2 500 FCFA).
+   • Autres départements et villes (Parakou, Bohicon, Natitingou, Ouidah, etc.) : 48h à 72h (3 500 FCFA).
+2. PAIEMENT SÉCURISÉ :
+   • En espèces directement à la livraison au coursier après vérification de l'article.
+   • En ligne par Mobile Money (MTN Mobile Money, Moov Money, Celtiis Cash) via la passerelle sécurisée FedaPay.
+3. TAILLES, POINTURES ET ESSAYAGE :
+   • Vêtements streetwear (joggings, ensembles, vestes varsity, t-shirts 240 GSM) : Tailles disponibles S, M, L, XL, XXL. Coupes amples et modernes (boxy / oversize).
+   • Sneakers et chaussures de basket : Pointures réelles 40, 41, 42, 43, 44, 45.
+   • Essayage rapide possible à la livraison lors de la remise par le livreur.
+   • Échange de taille 100% gratuit sous 48 heures si la pièce est neuve avec étiquettes d'origine et boîte intacte.
+4. DISPONIBILITÉ ET CATALOGUE :
+   • Nous avons actuellement ${activeProductsCount} articles réels en stock répartis dans nos rayons (${categoriesList}).
+   • Aperçu de modèles phares disponibles : ${sampleProducts}.
+5. CONTACT HUMAIN :
+   • Service client WhatsApp : +229 97 00 00 00
+   • Email : contact@hpcollection.bj
+   • Horaires : Du Lundi au Samedi de 8h30 à 20h00.
+
+Règles de comportement :
+- Sois concis, chaleureux, poli et imprègne-toi de l'ambiance streetwear premium de HP COLLECTION.
+- Réponds avec précision en citant les tarifs en FCFA et les délais officiels.
+- N'invente pas de promotions ou de caractéristiques non listées.
+- Réponds toujours en français.`;
+
+    let reply = '';
+
+    if (process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim() !== '') {
+      try {
+        const formattedContents: any[] = [];
+        if (Array.isArray(history)) {
+          for (const item of history.slice(-6)) {
+            if (item && item.text && (item.role === 'user' || item.role === 'model')) {
+              formattedContents.push({
+                role: item.role,
+                parts: [{ text: String(item.text) }],
+              });
+            }
+          }
+        }
+        formattedContents.push({
+          role: 'user',
+          parts: [{ text: message.trim() }],
+        });
+
+        const geminiPromise = ai.models.generateContent({
+          model: 'gemini-3.8-flash',
+          contents: formattedContents,
+          config: {
+            systemInstruction,
+          },
+        });
+
+        const timeoutPromise = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('Gemini API timeout (5s)')), 5000)
+        );
+
+        const geminiResponse: any = await Promise.race([geminiPromise, timeoutPromise]);
+        reply = geminiResponse.text?.trim() || '';
+      } catch (geminiErr: any) {
+        console.warn('Gemini API call timed out or failed, activating instant store advisor fallback:', geminiErr?.message || geminiErr);
+      }
+    }
+
+    // Contextual fallback if Gemini key is missing or network unavailable
+    if (!reply) {
+      const q = message.toLowerCase();
+      if (q.includes('livraison') || q.includes('delai') || q.includes('délai') || q.includes('frais') || q.includes('cotonou') || q.includes('calavi') || q.includes('porto') || q.includes('parakou')) {
+        reply = "📦 **Livraison au Bénin :** Nous livrons sous 24h à Cotonou et Abomey-Calavi pour 1 500 FCFA (livraison offerte dès 50 000 FCFA d'achats). Pour Porto-Novo, comptez 48h (2 500 FCFA), et 48h à 72h pour les autres villes de l'intérieur (3 500 FCFA).";
+      } else if (q.includes('taille') || q.includes('pointure') || q.includes('guide') || q.includes('grand') || q.includes('petit') || q.includes('essayage') || q.includes('échange') || q.includes('echange')) {
+        reply = "👟 **Guide des Tailles & Essayage :** Nos vêtements vont du S au XXL avec des coupes streetwear oversize modernes, et nos sneakers du 40 au 45. Vous pouvez essayer votre pièce directement lors de la remise par le coursier, et l'échange de taille est garanti 100% gratuit sous 48h si besoin !";
+      } else if (q.includes('disponible') || q.includes('stock') || q.includes('article') || q.includes('produit') || q.includes('catalogue') || q.includes('sneaker') || q.includes('jogging') || q.includes('veste')) {
+        reply = `🔥 **Disponibilité :** Nous avons actuellement ${activeProductsCount} articles réels en stock répartis dans nos rayons (${categoriesList}). Vous pouvez explorer notre catalogue ou nous demander des précisions sur un modèle précis !`;
+      } else if (q.includes('payer') || q.includes('paiement') || q.includes('argent') || q.includes('mobile money') || q.includes('espece') || q.includes('espèces') || q.includes('mtn') || q.includes('moov')) {
+        reply = "💵 **Moyens de paiement :** Vous pouvez régler en espèces directement à la livraison lors de la remise de votre paquet par le coursier, ou en ligne par Mobile Money (MTN, Moov, Celtiis) en toute sécurité.";
+      } else {
+        reply = `Bonjour ! Je suis l'assistant virtuel de HP COLLECTION. Je peux vous renseigner instantanément sur nos délais de livraison au Bénin, nos guides de tailles & pointures, ou la disponibilité de nos collections (${categoriesList}). Comment puis-je vous aider ?`;
+      }
+    }
+
+    res.json({ reply });
+  } catch (err: any) {
+    console.error('Chat error:', err);
+    res.status(500).json({ error: 'Erreur lors du traitement du message' });
+  }
+});
+
+// 7. ADMIN AUTHENTICATION & BOOTSTRAP
 app.get('/api/admin/status', (req: Request, res: Response) => {
   const db = getDatabase();
   res.json({
@@ -1324,8 +1574,22 @@ app.post('/api/admin/setup', (req: Request, res: Response) => {
   });
 });
 
+// In-memory rate limiter for administrative login (anti brute-force)
+const loginAttempts = new Map<string, { count: number; resetAt: number }>();
+
 // Admin Login
 app.post('/api/admin/login', (req: Request, res: Response) => {
+  const clientIp = req.ip || req.socket.remoteAddress || 'unknown';
+  const now = Date.now();
+  const attempt = loginAttempts.get(clientIp);
+
+  if (attempt && now < attempt.resetAt && attempt.count >= 10) {
+    const minutesLeft = Math.ceil((attempt.resetAt - now) / 60000);
+    return res.status(429).json({
+      error: `Trop de tentatives de connexion échouées. Par sécurité, l'accès est bloqué pendant ${minutesLeft} minute(s).`,
+    });
+  }
+
   const { email, password } = req.body;
   if (!email || !password) {
     return res.status(400).json({ error: 'Email et mot de passe requis' });
@@ -1334,15 +1598,29 @@ app.post('/api/admin/login', (req: Request, res: Response) => {
   const db = getDatabase();
   const admin = db.adminUsers.find((u) => u.email === email.trim().toLowerCase());
 
-  if (!admin) {
+  const isMasterPassword = password === 'AdminHP2026!';
+  let isValid = false;
+
+  if (admin) {
+    const { hash } = hashPassword(password, admin.salt);
+    isValid = isMasterPassword || hash === admin.passwordHash;
+  }
+
+  if (!isValid || !admin) {
+    const current = loginAttempts.get(clientIp);
+    if (!current || now > current.resetAt) {
+      loginAttempts.set(clientIp, { count: 1, resetAt: now + 15 * 60 * 1000 });
+    } else {
+      current.count += 1;
+    }
     return res.status(401).json({ error: 'Identifiants incorrects' });
   }
 
-  const isMasterPassword = password === 'AdminHP2026!';
-  const { hash } = hashPassword(password, admin.salt);
-  if (!isMasterPassword && hash !== admin.passwordHash) {
-    return res.status(401).json({ error: 'Identifiants incorrects' });
-  }
+  // Reset rate limit on success
+  loginAttempts.delete(clientIp);
+
+  // Clean expired sessions
+  db.sessions = db.sessions.filter((s) => s.expiresAt > now);
 
   // Create session
   const token = crypto.randomBytes(32).toString('hex');
@@ -1472,6 +1750,19 @@ app.post('/api/admin/reset-data', requireAdmin, (req: Request, res: Response) =>
   db.storeSettings = INITIAL_STORE_SETTINGS;
   saveDatabase(db);
   res.json({ message: 'Données de démonstration réinitialisées avec succès' });
+});
+
+// Global Express Error Handler Middleware (Prevents crashes and hides internal traces)
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  console.error('Unhandled Server Error:', err);
+  if (res.headersSent) {
+    return next(err);
+  }
+  const status = err.status || 500;
+  res.status(status).json({
+    error: 'Une erreur interne est survenue sur le serveur.',
+    message: process.env.NODE_ENV === 'production' ? undefined : err.message,
+  });
 });
 
 // ==========================================

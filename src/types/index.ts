@@ -162,6 +162,7 @@ export interface Order {
   paymentStatus: OrderPaymentStatus;
   fulfillmentStatus: OrderFulfillmentStatus;
   fedapayTransactionId?: string;
+  idempotencyKey?: string;
   statusHistory: StatusHistoryEntry[];
 }
 

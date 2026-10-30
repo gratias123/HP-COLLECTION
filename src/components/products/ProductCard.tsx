@@ -40,10 +40,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="relative aspect-[3/4] bg-[#121212] overflow-hidden">
         <img
           src={optimizedImage}
-          alt={product.name}
+          alt={`${product.name} (${product.category}) - Mode urbaine & streetwear HP COLLECTION Bénin`}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
           loading="lazy"
           decoding="async"
+          width="400"
+          height="533"
         />
 
         {/* Minimal Badges */}

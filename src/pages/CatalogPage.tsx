@@ -134,8 +134,8 @@ export const CatalogPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Categories Minimalist Horizontal Pills */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none font-mono text-xs uppercase tracking-wider">
+      {/* Categories Minimalist Horizontal Pills (All visible directly, no horizontal scrollbar) */}
+      <div className="flex flex-wrap items-center gap-2 pb-2 font-mono text-xs uppercase tracking-wider">
         <button
           onClick={() => setCategoryFilter('all')}
           className={`px-3.5 py-1.5 whitespace-nowrap transition-all border ${

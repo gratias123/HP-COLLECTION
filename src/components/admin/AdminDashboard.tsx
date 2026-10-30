@@ -770,8 +770,8 @@ export const AdminDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Tabs Navigation */}
-      <div className="flex border-b border-[#282828] overflow-x-auto scrollbar-none gap-1 sm:gap-2 pb-1 text-xs font-bold uppercase tracking-wider">
+      {/* Tabs Navigation (Directly visible, no horizontal scrollbar) */}
+      <div className="flex flex-wrap border-b border-[#282828] gap-1 sm:gap-2 pb-1 text-xs font-bold uppercase tracking-wider">
         <button
           onClick={() => setActiveTab('overview')}
           className={`px-3 sm:px-4 py-2.5 rounded-t-xs transition-all flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${

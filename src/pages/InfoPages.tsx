@@ -57,8 +57,8 @@ export const InfoPages: React.FC<InfoPagesProps> = ({ initialTab = 'contact' }) 
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-      {/* Tab navigation */}
-      <div className="flex border-b border-[#282828] overflow-x-auto scrollbar-none gap-6 pb-2 text-sm font-semibold">
+      {/* Tab navigation (All directly visible, zero scrollbar) */}
+      <div className="flex flex-wrap border-b border-[#282828] gap-4 sm:gap-8 pb-2 text-sm font-semibold">
         <button
           onClick={() => setTab('contact')}
           className={`pb-2 border-b-2 whitespace-nowrap transition-all ${

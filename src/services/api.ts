@@ -254,8 +254,9 @@ export const api = {
     promoCode?: string;
     deliveryZoneId: string;
     paymentMethod: string;
-  }): Promise<{ order: Order; message: string }> {
-    return request<{ order: Order; message: string }>('/orders', {
+    idempotencyKey?: string;
+  }): Promise<{ order: Order; message: string; duplicateDetected?: boolean }> {
+    return request<{ order: Order; message: string; duplicateDetected?: boolean }>('/orders', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
@@ -392,6 +393,17 @@ export const api = {
     return request('/admin/reset-data', {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` },
+    });
+  },
+
+  // AI Chatbot
+  async sendChatMessage(
+    message: string,
+    history?: Array<{ role: 'user' | 'model'; text: string }>
+  ): Promise<{ reply: string }> {
+    return request<{ reply: string }>('/chat', {
+      method: 'POST',
+      body: JSON.stringify({ message, history: history || [] }),
     });
   },
 };

@@ -91,7 +91,7 @@ export const HomePage: React.FC = () => {
     if (homeFilter === 'pantalons') return p.category === 'pantalons';
     if (homeFilter === 'accessoires') return p.category === 'accessoires';
     return true;
-  }).slice(0, 12);
+  }).slice(0, 24);
 
   // The 6 essential product lines requested by user
   const ESSENTIAL_LINES = [
@@ -153,7 +153,7 @@ export const HomePage: React.FC = () => {
           >
             <img
               src={getOptimizedImageUrl(look.image, { width: 1400, quality: 85 })}
-              alt={look.title}
+              alt={`${look.title} - Mode urbaine et streetwear HP COLLECTION Cotonou Bénin`}
               className="w-full h-full object-cover object-top sm:object-center filter brightness-95 contrast-105"
               loading={index === 0 ? 'eager' : 'lazy'}
               decoding={index === 0 ? 'sync' : 'async'}
@@ -241,8 +241,8 @@ export const HomePage: React.FC = () => {
 
           {/* Bottom Thumbnails & Slide Controls */}
           <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            {/* Visual miniatures of the looks */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+            {/* Visual miniatures of the looks (Directly visible, no scrollbar) */}
+            <div className="flex flex-wrap items-center gap-2">
               {LOOKBOOK_OUTFITS.map((look, idx) => (
                 <button
                   key={look.id}
@@ -256,8 +256,10 @@ export const HomePage: React.FC = () => {
                 >
                   <img
                     src={look.image}
-                    alt={look.title}
+                    alt={`${look.title} aperçu silhouette`}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                   {idx === currentSlide && (
                     <div className="absolute inset-0 border border-[#C7A747] bg-[#C7A747]/10" />
@@ -320,7 +322,7 @@ export const HomePage: React.FC = () => {
                 {/* Background image */}
                 <img
                   src={getOptimizedImageUrl(line.image, { width: 700, quality: 80 })}
-                  alt={line.title}
+                  alt={`${line.title} au Bénin - Rayon HP COLLECTION`}
                   className="absolute inset-0 w-full h-full object-cover object-center filter brightness-65 group-hover:scale-108 group-hover:brightness-80 transition-all duration-700 ease-out"
                   loading="lazy"
                   decoding="async"
@@ -487,8 +489,10 @@ export const HomePage: React.FC = () => {
                 <div className="relative aspect-[3/4] bg-[#101010] overflow-hidden">
                   <img
                     src={outfit.image}
-                    alt={outfit.title}
+                    alt={`${outfit.title} - Look streetwear HP COLLECTION Bénin`}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out filter brightness-95"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-75" />
 

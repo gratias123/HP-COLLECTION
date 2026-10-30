@@ -13,6 +13,7 @@ import { AdminDashboard } from './components/admin/AdminDashboard';
 import { ProductDetailModal } from './components/products/ProductDetailModal';
 import { CartDrawer } from './components/cart/CartDrawer';
 import { CheckoutModal } from './components/checkout/CheckoutModal';
+import { CustomerChatbot } from './components/chat/CustomerChatbot';
 
 const AppContent: React.FC = () => {
   const { currentPage } = useStore();
@@ -62,6 +63,7 @@ const AppContent: React.FC = () => {
       <CartDrawer />
       <CheckoutModal />
       <ToastContainer />
+      <CustomerChatbot />
 
       {/* Site Footer */}
       <Footer />

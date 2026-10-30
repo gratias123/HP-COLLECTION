@@ -9,6 +9,7 @@ import {
 } from '../types';
 import { CATEGORIES } from '../data/initialData';
 import { api } from '../services/api';
+import { updatePageSEO } from '../utils/seo';
 
 export interface ToastMessage {
   id: string;
@@ -142,9 +143,23 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   // Toasts
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
-  // Page Routing (simple fast SPA router)
-  const [currentPage, setCurrentPage] = useState<string>('home'); // 'home' | 'catalog' | 'order-tracking' | 'contact' | 'delivery-info' | 'legal' | 'admin' | 'wishlist'
-  const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  // Page Routing (simple fast SPA router with URL sync)
+  const [currentPage, setCurrentPage] = useState<string>(() => {
+    if (typeof window === 'undefined') return 'home';
+    const path = window.location.pathname.replace(/^\//, '');
+    const validPages = ['home', 'catalog', 'order-tracking', 'contact', 'delivery-info', 'legal', 'privacy', 'mentions', 'admin', 'wishlist'];
+    if (validPages.includes(path)) return path;
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get('page');
+    if (pageParam && validPages.includes(pageParam)) return pageParam;
+    if (params.get('category') || params.get('product')) return 'catalog';
+    return 'home';
+  });
+  const [categoryFilter, setCategoryFilter] = useState<string>(() => {
+    if (typeof window === 'undefined') return 'all';
+    const params = new URLSearchParams(window.location.search);
+    return params.get('category') || 'all';
+  });
 
   const showToast = useCallback((message: string, type: 'success' | 'error' | 'info' = 'success') => {
     const id = `${Date.now()}-${Math.random()}`;
@@ -205,6 +220,119 @@ export const StoreProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     refreshProducts();
     refreshSettings();
   }, [refreshProducts, refreshSettings]);
+
+  // Deep-link product modal when loaded with ?product=ID
+  useEffect(() => {
+    if (products.length > 0 && typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get('product');
+      if (productId && !selectedProductForDetail) {
+        const found = products.find(
+          (p) => p.id === productId || p.sku.toLowerCase() === productId.toLowerCase()
+        );
+        if (found) {
+          setSelectedProductForDetail(found);
+        }
+      }
+    }
+  }, [products, selectedProductForDetail]);
+
+  // Dynamic SEO Metadata and URL Synchronization
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    if (selectedProductForDetail) {
+      updatePageSEO({
+        product: selectedProductForDetail,
+        canonicalPath: `/catalog?product=${selectedProductForDetail.id}`,
+      });
+      const url = new URL(window.location.href);
+      url.pathname = '/catalog';
+      url.searchParams.set('product', selectedProductForDetail.id);
+      window.history.replaceState({}, '', url.toString());
+      return;
+    }
+
+    const url = new URL(window.location.href);
+    url.searchParams.delete('product');
+
+    if (currentPage === 'catalog') {
+      const activeCat = categoryFilter !== 'all' ? CATEGORIES.find((c) => c.id === categoryFilter) : undefined;
+      const categoryName = activeCat ? activeCat.name : undefined;
+      url.pathname = '/catalog';
+      if (categoryName) {
+        url.searchParams.set('category', categoryFilter);
+      } else {
+        url.searchParams.delete('category');
+      }
+
+      updatePageSEO({
+        title: categoryName ? `${categoryName} au Bénin` : 'Catalogue Complet & Streetwear',
+        description: categoryName
+          ? `Découvrez notre collection de ${categoryName.toLowerCase()} au Bénin chez HP COLLECTION. Qualité premium, essayage à la livraison et expédition express à Cotonou et Calavi.`
+          : 'Découvrez notre collection exclusive de streetwear, sneakers et mode urbaine au Bénin chez HP COLLECTION. Stock disponible à Cotonou.',
+        categoryName,
+        canonicalPath: categoryName ? `/catalog?category=${categoryFilter}` : '/catalog',
+      });
+      window.history.replaceState({}, '', url.toString());
+    } else {
+      url.searchParams.delete('category');
+      if (currentPage === 'home') {
+        url.pathname = '/';
+        updatePageSEO({
+          title: 'Boutique de Vêtements, Streetwear & Sneakers au Bénin',
+          description: 'HP COLLECTION — Boutique de référence au Bénin : vêtements streetwear, sneakers authentiques, joggings et vestes. Livraison 24h à Cotonou et paiement à la livraison.',
+          canonicalPath: '/',
+        });
+      } else {
+        url.pathname = `/${currentPage}`;
+        const pageTitles: Record<string, { title: string; desc: string }> = {
+          'order-tracking': {
+            title: 'Suivi de Commande en direct',
+            desc: 'Suivez l’état d’expédition et de livraison de votre commande HP COLLECTION en temps réel au Bénin.',
+          },
+          'contact': {
+            title: 'Contact & Service Client',
+            desc: 'Contactez le service client HP COLLECTION au Bénin via WhatsApp ou téléphone pour vos commandes et renseignements.',
+          },
+          'delivery-info': {
+            title: 'Livraison 24h & Tarifs au Bénin',
+            desc: 'Modalités de livraison express 24h à Cotonou, Calavi, Porto-Novo et dans tout le Bénin. Essayage possible et paiement à la livraison.',
+          },
+          'legal': {
+            title: 'Mentions Légales & Conditions Générales',
+            desc: 'Consultez les mentions légales, la politique de confidentialité et les conditions générales de vente de HP COLLECTION Bénin.',
+          },
+          'privacy': {
+            title: 'Politique de Confidentialité',
+            desc: 'Protection des données personnelles et respect de la vie privée chez HP COLLECTION Bénin.',
+          },
+          'mentions': {
+            title: 'Mentions Légales',
+            desc: 'Informations éditeur et mentions légales de la boutique HP COLLECTION.',
+          },
+          'wishlist': {
+            title: 'Mes Favoris',
+            desc: 'Retrouvez votre liste de souhaits et vos coups de cœur streetwear sur HP COLLECTION.',
+          },
+          'admin': {
+            title: 'Administration Sécurisée',
+            desc: 'Espace d’administration de la boutique HP COLLECTION.',
+          },
+        };
+        const pageInfo = pageTitles[currentPage] || {
+          title: 'Boutique Streetwear & Sneakers au Bénin',
+          desc: 'HP COLLECTION — Boutique en ligne de mode urbaine au Bénin.',
+        };
+        updatePageSEO({
+          title: pageInfo.title,
+          description: pageInfo.desc,
+          canonicalPath: `/${currentPage}`,
+        });
+      }
+      window.history.replaceState({}, '', url.toString());
+    }
+  }, [currentPage, categoryFilter, selectedProductForDetail]);
 
   // Verify Admin Session on mount
   useEffect(() => {
