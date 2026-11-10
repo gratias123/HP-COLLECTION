@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Article de mode urbaine, sneakers ou accessoire HP COLLECTION",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sku": { "type": "string" },
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "salePrice": { "type": "number" },
+        "status": { "type": "string", "enum": ["published", "draft", "archived"] },
+        "totalStock": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "sku", "name", "category", "price", "status"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Commande client sur le marché béninois",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderNumber": { "type": "string" },
+        "customer": { "type": "object" },
+        "items": { "type": "array" },
+        "total": { "type": "number" },
+        "paymentMethod": { "type": "string", "enum": ["cod", "fedapay_mobile_money"] },
+        "paymentStatus": { "type": "string", "enum": ["pending", "paid", "failed", "refunded"] },
+        "fulfillmentStatus": { "type": "string", "enum": ["pending", "confirmed", "processing", "shipped", "delivered", "cancelled"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "orderNumber", "customer", "items", "total", "paymentMethod", "fulfillmentStatus"]
+    },
+    "PromoCode": {
+      "title": "PromoCode",
+      "description": "Code promotionnel et réduction",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "discountType": { "type": "string", "enum": ["percentage", "fixed"] },
+        "discountValue": { "type": "number" },
+        "active": { "type": "boolean" }
+      },
+      "required": ["code", "discountType", "discountValue", "active"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Catalogue de vêtements et sneakers"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Commandes clients"
+    },
+    "/coupons/{couponId}": {
+      "schema": "PromoCode",
+      "description": "Codes promotionnels"
+    }
+  }
+}

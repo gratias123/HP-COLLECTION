@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/healthz",
+      "destination": "/api"
+    },
+    {
+      "source": "/((?!api/|assets/|uploads/|favicon|robots|site\\.webmanifest|apple-touch).*)$",
+      "destination": "/index.html"
+    }
+  ]
+}

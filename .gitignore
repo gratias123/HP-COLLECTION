@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+!.env.production.example
+backups/
+data/store.pre-restore*
+data/store.tmp.*
+data/backups/
+data/*.sql
+.aistudio/
+.tempmediaStorage/
+
